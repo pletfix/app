@@ -1,0 +1,350 @@
+Softwaredesign-Paradigma (grundsätzliche Denkweise)
+====================================
+
+    Meine Ziele für das Framework
+    ------------------------------
+
+        Prio 1: Schlank und somit wartbar!
+            Wenn externes Package verwendet wird, sollte dies möglichst keine weitere Packages verwenden.
+
+        Prio 2: Schnell!
+            Ausführung von unnötigen Code muss vermieden werden!
+
+        Prio 3: Unabhängigkeit!
+            Externe Klassen werden im Serivce Container mit eigene Interfaces oder mit Interfaces der
+            PHP Framework Interop Group (PSR) eingebunden (wenn nötig durch Einsatz von Adapter)
+
+        Prio 4: Sexy Code! "Moderne" Anätze
+            KISS-Prinzip - Keep it simple, stupid (mach es so einfach wie möglich)
+            DRY-Prinzip  - Don’t repeat yourself (wiederhole dich nicht)
+            Convention over Configuration - Konvention vor Konfiguration
+            SRP-Prinzip - Single Responsibility Principle (Prinzip der eindeutigen Verantwortlichkeit, s. https://de.m.wikipedia.org/wiki/Single-Responsibility-Prinzip)
+            Per DI keine festen Abhängigkeiten und somit Testbar
+            Einsatz von Factories
+
+
+    Forderungen / Motivation
+    ------------------------
+
+        - Deutlich schneller als Larvel
+            Ladezeit 'Hallo Welt!': (L5: 140-150ms)
+                Initial: 12-15ms
+                View:    17ms
+
+        - Leicht aktualisierbar. Es darf nicht wie bei Laravel in ein mehrstündiges Unterfangen ausarten.
+
+
+Features
+===========
+
+    Erledigt
+    --------
+
+        Composer Package Manager, Autoloading
+        Global Functions (services, helpers, utilities, paths...)
+        Dependency Injection
+        Environment Support
+        Configuration
+        Request- and Response Services
+        Controller
+        Routing
+        Logging
+        Exception Handling & Pretty Error Reporting (human readable)
+        Facades
+        Caching
+        View Template Engine (lightweight/Simplified clone of Laravel's Blade Template 5.3)
+        Collection
+        Database Access Layer
+        Query Builder
+        Migrator
+        Asset Management
+        Console (Command line Interface)
+        Bower-Packages via Composer laden
+        Plugin-Support
+
+    Offen
+    -----
+        Testing (PHPUnit und Mink)
+        Benschmark-Tool (Profiler)
+        Translator (l18n)
+        Session-Handling
+        Security (Authenticate, Authorize, Policy, Middleware, global token authentication, rate limiting)
+        Pluralizer: https://github.com/propelorm/Propel2/tree/master/src/Propel/Common/Pluralizer
+        DateTime (\Carbon\Carbon)
+            - https://github.com/fightbulc/moment.php
+            - http://momentjs.com/docs/
+            oder:
+            - https://github.com/cakephp/chronos
+        Mailer
+        SOUP and REST Services, CURL
+        Daemon (Processe)
+        WebSocket
+        FormBuilder
+            - FormValidator
+            - CSRF Protection
+        Skeleton, Scaffold
+        Update-Manager
+        Responsive Design (MobilView)
+        NativeScript
+
+    Todos
+    -----
+        sonstige brauchbaren Funktionen aus saphire übernehmen
+
+        Boot-Prozess beschleunigen:
+            DI serialisieren? Evtl ist das Unserialisieren schneller als services.php per require einzubinden.
+            Gilt evtl. auch für Routes?
+
+        Verzeichnisstruktur
+            - Seeder-Verzeichnis löschen, ,Migrations-Verz. eine Ebene höher
+            - Klare Trennung schaffen zw. core (Finger weg - nicht zu editieren!) und customer.
+
+        Plugin-Support:
+            composer-Type "happy-plugin" (s. CakePHP)
+
+            Optimierung:
+            ------------
+            Prüfen, ob das etwas bringt:
+
+            1) Behauptung: file_get_content() mit serilize() ist schneller als include und Objekte neu erstellen
+
+            	if (ftime(cache/services.php) != ftime(boot/services.php)) {
+            		file_put_content(cache/services.php, serialize(boot/services.php))
+            	}
+            	DI::instance = unserilize(file_get_content(cache/services.php))
+
+            	vs.
+            		require(boot/services.php)
+            		@include(storage/cache/plugins/bootstraps.php)
+
+
+            2) Behauptung: Statische Bootstraps sind schneller
+
+            	Dummy1::func()
+            	Dummy2::func()
+            	Dummy3::func()
+            	Dummy4::func()
+            	...
+            	Dummy100::func()
+
+            	vs.
+
+            	(new Dummy1)->func()
+            	(new Dummy2)->func()
+            	(new Dummy3)->func()
+            	(new Dummy4)->func()
+            	...
+            	(new Dummy100)->func()
+
+
+        Console:
+           -  Evtl. Funktionen für Terminal-Informationen und clear() nach boot/Console verlagern. Passt thematisch da ganz gut hin.
+                Müsste aber dann alles statisch sein (da von Console keine Instanz erzeugt wird)
+                    Console::name()
+                    Console::version()
+                    Console::width()
+                    Console::height()
+                    Console::clearScreen()
+                Auch für Application könnte System-Variablen hier platz finden:
+                    Application::name()
+                    Application::version()
+                    Application::os()
+                    Application::browser()
+                    Application::route()
+                Alternative: Terminal-Klasse bauen, und Browser-Klasse
+           - stdio(): was macht stderr?
+           - canRead() tsten
+           - getTerminalDimensions() testen
+           - table() bauen
+
+        Database Access Layer:
+            - Rückgabe von query() ändern-> collection() (lediet die Performance?)
+            - Import, Export, Backup, Restore für Database
+            - database-Objekt, Wording ändern: "column type supported by Database Layer" -> "database abstract type"
+            - getSql() für db-Objekt. Evtl zentral steuerbar machen, dass mitgeloggt werden kann.
+            - Besser: Event-Handlich einbauene
+
+        Model (ORM, ActiveRecord, Repository)
+            ActiveRecord oder DataMapper?
+            Kandidaten:  http://www.gajotres.net/best-available-php-orm-libraries-part-1/
+            - Eloquent
+            - Doctrine2 (Using Doctrine 2 will be an overkill.)
+                http://www.doctrine-project.org/
+                https://www.sitepoint.com/laravel-doctrine-best-of-both-worlds/
+                http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/data-retrieval-and-manipulation.html
+            - Propel2
+                http://propelorm.org/Propel/documentation/
+                https://github.com/propelorm/Propel2
+
+        Tests für alle Funktionen schreiben
+
+        alle Todos durchgehehen
+
+
+Konventionen
+============
+
+    Funktion schreiben: Erst die Ausnahmen und Trivial-Fälle behandeln, dann die Kernfunktion implementieren!
+
+    Fragen
+    -------
+
+        - Contracts oder Interfaces? Wie heißt das in anderen Sprachen?
+
+        - Error oder Exceptions? Gibt es einen Unterschied?
+
+        - In der Dokumentation Befehlsform oder nicht? "Get attribute." vs. "Gets a attribute."
+          2. Mit oder ohne Punkt in der Überschrift? Was sagt PSR Coding Style?
+
+        - Wann Facade, wann Helper benutzen?
+
+        - member function, getter, setter:
+            1 Möglichkeit: (Classic)
+                $value = $class->getProperty()
+                $class->setProperty($value);
+            2. Mögl.        (jQuery-Like, Aufruf kürzer als Mögl. 1, daher lt. KISS-Prinzip besser)
+                $value = $class->property()
+                $class->property($value);
+            2. Mögl.:    (Für Models intuitiv, für ReadOnly-Props aber eher verwirrend)
+                $value = $class->property;
+                $class->property = $value
+
+
+    Verzeichnisstruktur
+    -------------------
+
+    Vergleiche:
+        http://guides.rubyonrails.org/getting_started.html
+        https://book.cakephp.org/3.0/en/intro/cakephp-folder-structure.html
+
+        Directory Structure
+         - core                     Core-Bereich - bleibt für die Anwendung unberührt (kann später auch als Package unter vendor liegen)
+            - bin                   Binaries
+                - hiddeninput.exe
+            - src               Autoload-Verzeichnis nach PSR-4-Standard, Namespace \Core
+                - Commands
+                - Controller
+                - Exceptions
+                - Models
+                - Services
+                - Bootsraps         Beinhaltet Application- und Console-Klasse und Bootstrapper
+                Application.php
+                Console.php
+            - docs                  Dokumente
+            - facades               Facaden (deprecated)
+            - functions             Funktionen, die automatisch geladen werden
+            - manifest
+                - assets            Manifest Dateien für Assets
+                    manifest.php
+                - plugins           Manifest Dateien für Plugins
+         - app                      Autoload-Verzeichnis nach PSR-4-Standard, Namespace \App
+            - Commands
+            - Controller
+            - Exceptions
+            - Handler
+            - Models
+            - Services
+         - config                   Konfigurationsdateien (geben PHP-Arrays zurück; Ausnahme: routes.php und services.php)
+            app.php
+            cache.php
+            database.php
+            mail.php
+            routes.php              Routen der Anwendung
+            services.php            Registrierung der Services
+         - library                  Daten, auf die die Anwendung serverseitig zugreift
+            - classes               Klassen, die per Classmap geladen werden (weil sich nicht dem PSR-4-Standard folgen)
+            - facades               Facadenn (deprecated)
+            - functions             Funktionen, die automatisch geladen werden
+         - public                   Einstiegspunkt für alle Anfragen. Daten, auf die die der Browser zugreift.
+            - build
+            - css
+            - fonts
+            - images
+            - js
+            .htaccess
+            favicon.ico
+            index.php
+            php.ini
+            robots.txt
+            sitemap.xml
+         - resources                Daten, auf die die Anwendung nicht direkt zugreift
+            - assets                Daten, die per Gulp in den Public-Ordner kopiert werden
+                - css
+                - fonts
+                - js
+                - less
+                - sass
+                - scss
+                - vendor            Third Party Packages
+                build.php           Asset Build Information File
+            - migrations            Migrations-Dateien
+            - docs                  Dokumente
+            - lang                  Translator-Dateien (werden kompiliert und im Cache abgelegt)
+            - views                 Views (werden kompiliert und im Cache abgelegt)
+         - storage                  Für den Webservice beschreibbar (z.B. für Logfiles, Cache oder komilierte Views)
+            - cache
+            - db
+            - logs
+         - tests                    The tests directory contains your automated tests.
+         - vendor                   Third Party Packages
+         - workbench                Folder for develop of plugins
+         .env
+         .env.example
+         .gitignore
+         composer.json
+         composer.lock
+         console
+         license.md
+         README.md
+
+Require Packages
+================
+    aura/sqlquery   (Query Builder)
+    composer
+        bin
+    doctrine/cache
+    jdorn/sql-formatter
+    fightbulc/moment
+    monolog/monolog
+        psr/log
+    vlucas/phpdotenv
+
+    // to build assets
+        tedivm/jshrink
+        natxet/cssmin  (https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cssmin/cssmin-v3.0.1.php)
+        oyejorge/less.php
+        leafo/scssphp
+
+Links
+=======
+
+    https://modess.io/php-micro-framework-for-a-restful-api-part-1/
+
+    MVC – Einführung durch ein eigenes kleines „Framework“
+        http://poe-php.de/oop/mvc-einfuehrung-framework
+
+    Patterns
+        http://www.phptherightway.com/pages/Design-Patterns.html
+        http://poe-php.de/oop/entwurfsmuster-module-vereinheitlichen-mit-einem-adapter#more-332  (Adapter)
+
+    Dependency Injection
+        http://poe-php.de/oop/objektorientierung-oop-verwalten-der-dienste-dependency-injection
+        https://github.com/joomla-framework/di/blob/master/src/Container.php  (Constructor Reflection)
+        https://github.com/auraphp
+
+    Tests
+        http://poe-php.de/tag/mockobjects
+        http://florianherlings.de/artikel/php_integration_testing_phpunit_mink
+        http://mink.behat.org/en/latest/
+
+    Router
+        http://codereview.stackexchange.com/questions/101364/simple-router-class
+        https://github.com/mikecao/flight
+        https://github.com/dannyvankooten/AltoRouter/blob/master/AltoRouter.php
+        https://github.com/joomla-framework/router/blob/master/src/Router.php
+        https://github.com/nikic/FastRoute/tree/master/src
+
+    Weitere Frameworks
+        https://github.com/cakephp/cakephp/tree/master/src CakePHP
+        https://github.com/auraphp AuraPHP
+        Doctrine

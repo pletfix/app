@@ -1,0 +1,8 @@
+/node_modules
+/public/vendor
+/public/.htaccess
+/storage
+/vendor
+.DS_Store
+.env
+.idea

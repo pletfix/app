@@ -1,0 +1,2070 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "8c26219334f571511472e0017f25c2c8",
+    "content-hash": "6f2d7aea7a76395129d2c055ccf19aac",
+    "packages": [
+        {
+            "name": "aura/sqlquery",
+            "version": "2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.SqlQuery.git",
+                "reference": "dd81b57aeb43628180a9c70a4df58d872024d7f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.SqlQuery/zipball/dd81b57aeb43628180a9c70a4df58d872024d7f2",
+                "reference": "dd81b57aeb43628180a9c70a4df58d872024d7f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "suggest": {
+                "aura/sql": "Provides an extension to the native PDO along with a profiler and connection locator. Use version 2.*."
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\SqlQuery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.SqlQuery Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.SqlQuery/contributors"
+                }
+            ],
+            "description": "Object-oriented query builders for MySQL, Postgres, SQLite, and SQLServer; can be used with any database connection library.",
+            "homepage": "https://github.com/auraphp/Aura.SqlQuery",
+            "keywords": [
+                "database",
+                "db",
+                "delete",
+                "dml",
+                "insert",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "query",
+                "select",
+                "sql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "update"
+            ],
+            "time": "2016-10-03 20:34:56"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "v1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.5|~7.0"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8|~5.0",
+                "predis/predis": "~1.0",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Caching library offering an object-oriented API for many cache backends",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2016-10-29 11:16:17"
+        },
+        {
+            "name": "fightbulc/moment",
+            "version": "1.26.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fightbulc/moment.php.git",
+                "reference": "68f3ddad3feca6d7aae5a333724401355661afbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fightbulc/moment.php/zipball/68f3ddad3feca6d7aae5a333724401355661afbb",
+                "reference": "68f3ddad3feca6d7aae5a333724401355661afbb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Moment\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashish Tilara",
+                    "email": "ashish@itcutives.com",
+                    "role": "developer"
+                },
+                {
+                    "name": "Jaroslaw Kozak",
+                    "email": "jaroslaw.kozak68@gmail.com",
+                    "role": "developer"
+                },
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me",
+                    "role": "developer"
+                }
+            ],
+            "description": "Parse, validate, manipulate, and display dates in PHP w/ i18n support. Inspired by moment.js",
+            "keywords": [
+                "date",
+                "display",
+                "format",
+                "i18n",
+                "locale",
+                "manipulate",
+                "moment",
+                "parse",
+                "time",
+                "translation",
+                "validate"
+            ],
+            "time": "2017-01-19 07:57:28"
+        },
+        {
+            "name": "jdorn/sql-formatter",
+            "version": "v1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.22.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bad29cb8d18ab0315e6c477751418a82c850d558",
+                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "~5.3"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2016-11-26 00:15:39"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Attribution"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2016-09-01 10:05:43"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "leafo/scssphp",
+            "version": "v0.6.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/scssphp.git",
+                "reference": "6fdfe19d2b13a3f12ba0792227f0718809ce4e4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/6fdfe19d2b13a3f12ba0792227f0718809ce4e4d",
+                "reference": "6fdfe19d2b13a3f12ba0792227f0718809ce4e4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "kherge/box": "~2.5",
+                "phpunit/phpunit": "~3.7",
+                "squizlabs/php_codesniffer": "~2.5"
+            },
+            "bin": [
+                "bin/pscss"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Leafo\\ScssPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://leafo.github.io/scssphp/",
+            "keywords": [
+                "css",
+                "less",
+                "sass",
+                "scss",
+                "stylesheet"
+            ],
+            "time": "2016-09-11 01:34:11"
+        },
+        {
+            "name": "linkorb/jsmin-php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/linkorb/jsmin-php.git",
+                "reference": "be85d87fc9c27730e7e9ced742b13010dafc1026"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/linkorb/jsmin-php/zipball/be85d87fc9c27730e7e9ced742b13010dafc1026",
+                "reference": "be85d87fc9c27730e7e9ced742b13010dafc1026",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joost Faassen",
+                    "email": "j.faassen@linkorb.com",
+                    "role": "Packaging for composer"
+                },
+                {
+                    "name": "Ryan Grove",
+                    "email": "ryan@wonko.com",
+                    "role": "PHP port"
+                },
+                {
+                    "name": "Adam Gofort",
+                    "email": "aag@adamgoforth.com",
+                    "role": "Updates to the PHP port"
+                },
+                {
+                    "name": "Douglas Crockford",
+                    "email": "douglas@crockford.com"
+                }
+            ],
+            "description": "Unofficial package of jsmin-php",
+            "homepage": "http://www.github.com/linkorb/jsmin-php",
+            "keywords": [
+                "javascript",
+                "jsmin",
+                "minify"
+            ],
+            "time": "2013-03-15 13:16:35"
+        },
+        {
+            "name": "natxet/CssMin",
+            "version": "v3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/natxet/CssMin.git",
+                "reference": "92de3fe3ccb4f8298d31952490ef7d5395855c39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/natxet/CssMin/zipball/92de3fe3ccb4f8298d31952490ef7d5395855c39",
+                "reference": "92de3fe3ccb4f8298d31952490ef7d5395855c39",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Scylla",
+                    "email": "joe.scylla@gmail.com",
+                    "homepage": "https://profiles.google.com/joe.scylla"
+                }
+            ],
+            "description": "Minifying CSS",
+            "homepage": "http://code.google.com/p/cssmin/",
+            "keywords": [
+                "css",
+                "minify"
+            ],
+            "time": "2015-09-25 11:13:11"
+        },
+        {
+            "name": "npm-asset/ansicolors",
+            "version": "0.2.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/ansicolors/-/ansicolors-0.2.1.tgz",
+                "reference": null,
+                "shasum": "be089599097b74a5c9c4a84a0cdbcdb62bd87aef"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-main": "ansicolors.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/thlorenz/ansicolors.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "node test/*.js"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thorsten Lorenz",
+                    "email": "thlorenz@gmx.de",
+                    "url": "thlorenz.com"
+                }
+            ],
+            "description": "Functions that surround a string with ansicolor codes so it prints in color.",
+            "keywords": [
+                "ansi",
+                "colors",
+                "highlight",
+                "string"
+            ]
+        },
+        {
+            "name": "npm-asset/async",
+            "version": "0.2.10",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/async/-/async-0.2.10.tgz",
+                "reference": null,
+                "shasum": "b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
+            },
+            "require-dev": {
+                "npm-asset/nodelint": ">0.0.0",
+                "npm-asset/nodeunit": ">0.0.0",
+                "npm-asset/uglify-js": "dev-1.2.x|1.2.x"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/caolan/async/issues"
+                },
+                "npm-asset-main": "./lib/async",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "https://github.com/caolan/async.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "nodeunit test/test-async.js"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Caolan McMahon"
+                }
+            ],
+            "description": "Higher-order functions and common patterns for asynchronous code"
+        },
+        {
+            "name": "npm-asset/bindings",
+            "version": "1.2.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz",
+                "reference": null,
+                "shasum": "14ad6113812d2d37d72e67b4cacb4bb726505f11"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/TooTallNate/node-bindings/issues"
+                },
+                "npm-asset-main": "./bindings.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/TooTallNate/node-bindings.git"
+                },
+                "npm-asset-scripts": []
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nathan Rajlich",
+                    "email": "nathan@tootallnate.net",
+                    "url": "http://tootallnate.net"
+                }
+            ],
+            "description": "Helper module for loading your native module's .node file",
+            "homepage": "https://github.com/TooTallNate/node-bindings",
+            "keywords": [
+                "addon",
+                "bindings",
+                "c",
+                "c++",
+                "gyp",
+                "native",
+                "waf"
+            ]
+        },
+        {
+            "name": "npm-asset/bootstrap",
+            "version": "3.3.7",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.3.7.tgz",
+                "reference": null,
+                "shasum": "5a389394549f23330875a3b150656574f8a9eb71"
+            },
+            "require-dev": {
+                "npm-asset/btoa": "~1.1.2",
+                "npm-asset/glob": "~7.0.3",
+                "npm-asset/grunt": "~1.0.1",
+                "npm-asset/grunt-autoprefixer": "~3.0.4",
+                "npm-asset/grunt-contrib-clean": "~1.0.0",
+                "npm-asset/grunt-contrib-compress": "~1.3.0",
+                "npm-asset/grunt-contrib-concat": "~1.0.0",
+                "npm-asset/grunt-contrib-connect": "~1.0.0",
+                "npm-asset/grunt-contrib-copy": "~1.0.0",
+                "npm-asset/grunt-contrib-csslint": "~1.0.0",
+                "npm-asset/grunt-contrib-cssmin": "~1.0.0",
+                "npm-asset/grunt-contrib-htmlmin": "~1.5.0",
+                "npm-asset/grunt-contrib-jshint": "~1.0.0",
+                "npm-asset/grunt-contrib-less": "~1.3.0",
+                "npm-asset/grunt-contrib-pug": "~1.0.0",
+                "npm-asset/grunt-contrib-qunit": "~0.7.0",
+                "npm-asset/grunt-contrib-uglify": "~1.0.0",
+                "npm-asset/grunt-contrib-watch": "~1.0.0",
+                "npm-asset/grunt-csscomb": "~3.1.0",
+                "npm-asset/grunt-exec": "~1.0.0",
+                "npm-asset/grunt-html": "~8.0.1",
+                "npm-asset/grunt-jekyll": "~0.4.4",
+                "npm-asset/grunt-jscs": "~3.0.1",
+                "npm-asset/grunt-saucelabs": "~9.0.0",
+                "npm-asset/load-grunt-tasks": "~3.5.0",
+                "npm-asset/markdown-it": ">=7.0.0,<8.0.0",
+                "npm-asset/shelljs": ">=0.7.0,<0.8.0",
+                "npm-asset/shx": ">=0.1.2,<0.2.0",
+                "npm-asset/time-grunt": ">=1.3.0,<2.0.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/twbs/bootstrap/issues"
+                },
+                "npm-asset-files": [
+                    "dist",
+                    "fonts",
+                    "grunt",
+                    "js/*.js",
+                    "less/**/*.less",
+                    "Gruntfile.js",
+                    "LICENSE"
+                ],
+                "npm-asset-main": "./dist/js/npm",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/twbs/bootstrap.git"
+                },
+                "npm-asset-scripts": {
+                    "change-version": "node grunt/change-version.js",
+                    "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
+                    "test": "grunt test"
+                },
+                "npm-asset-engines": {
+                    "node": ">=0.10.1"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Twitter, Inc."
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ]
+        },
+        {
+            "name": "npm-asset/cardinal",
+            "version": "0.4.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/cardinal/-/cardinal-0.4.4.tgz",
+                "reference": null,
+                "shasum": "ca5bb68a5b511b90fe93b9acea49bdee5c32bfe2"
+            },
+            "require": {
+                "npm-asset/ansicolors": "~0.2.1",
+                "npm-asset/redeyed": "~0.4.0"
+            },
+            "require-dev": {
+                "npm-asset/readdirp": "~0.2.1",
+                "npm-asset/tap": "~0.3.1"
+            },
+            "bin": {
+                "cdl": "./bin/cdl.js"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/thlorenz/cardinal/issues"
+                },
+                "npm-asset-main": "cardinal.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/thlorenz/cardinal.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "tap ./test/*.js",
+                    "demo": "node examples/highlight-string.js; node examples/highlight-self; node examples/highlight-self-hide-semicolons;"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thorsten Lorenz",
+                    "email": "thlorenz@gmx.de",
+                    "url": "thlorenz.com"
+                }
+            ],
+            "description": "Syntax highlights JavaScript code with ANSI colors to be printed to the terminal.",
+            "homepage": "https://github.com/thlorenz/cardinal",
+            "keywords": [
+                "console",
+                "highlight",
+                "javascript",
+                "json",
+                "output",
+                "print",
+                "syntax",
+                "terminal",
+                "theme"
+            ]
+        },
+        {
+            "name": "npm-asset/csv-parse",
+            "version": "1.2.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/csv-parse/-/csv-parse-1.2.0.tgz",
+                "reference": null,
+                "shasum": "047b73868ab9a85746e885f637f9ed0fb645a425"
+            },
+            "require-dev": {
+                "npm-asset/coffee-script": "1.10.0",
+                "npm-asset/csv-generate": "1.0.0",
+                "npm-asset/csv-spectrum": "1.0.0",
+                "npm-asset/each": "0.6.1",
+                "npm-asset/mocha": "2.5.3",
+                "npm-asset/should": "9.0.2"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-main": "./lib",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "http://www.github.com/wdavidw/node-csv-parse"
+                },
+                "npm-asset-scripts": {
+                    "coffee": "coffee -b -o lib src",
+                    "pretest": "coffee -b -o lib src",
+                    "test": "NODE_ENV=test ./node_modules/.bin/mocha --compilers coffee:coffee-script/register --reporter dot"
+                },
+                "npm-asset-optional-dependencies": []
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Worms",
+                    "email": "david@adaltas.com",
+                    "url": "http://www.adaltas.com"
+                },
+                {
+                    "name": "Will White",
+                    "url": "https://github.com/willwhite"
+                },
+                {
+                    "name": "Justin Latimer",
+                    "url": "https://github.com/justinlatimer"
+                },
+                {
+                    "name": "jonseymour",
+                    "url": "https://github.com/jonseymour"
+                },
+                {
+                    "name": "pascalopitz",
+                    "url": "https://github.com/pascalopitz"
+                },
+                {
+                    "name": "Josh Pschorr",
+                    "url": "https://github.com/jpschorr"
+                },
+                {
+                    "name": "Elad Ben-Israel",
+                    "url": "https://github.com/eladb"
+                },
+                {
+                    "name": "Philippe Plantier",
+                    "url": "https://github.com/phipla"
+                },
+                {
+                    "name": "Tim Oxley",
+                    "url": "https://github.com/timoxley"
+                },
+                {
+                    "name": "Damon Oehlman",
+                    "url": "https://github.com/DamonOehlman"
+                },
+                {
+                    "name": "Alexandru Topliceanu",
+                    "url": "https://github.com/topliceanu"
+                },
+                {
+                    "name": "Visup",
+                    "url": "https://github.com/visup"
+                },
+                {
+                    "name": "Edmund von der Burg",
+                    "url": "https://github.com/evdb"
+                },
+                {
+                    "name": "Douglas Christopher Wilson",
+                    "url": "https://github.com/dougwilson"
+                },
+                {
+                    "name": "Joe Eaves",
+                    "url": "https://github.com/Joeasaurus"
+                },
+                {
+                    "name": "Mark Stosberg",
+                    "url": "https://github.com/markstos"
+                }
+            ],
+            "description": "CSV parsing implementing the Node.js `stream.Transform` API",
+            "homepage": "http://csv.adaltas.com/parse/",
+            "keywords": [
+                "csv",
+                "parse",
+                "parser"
+            ]
+        },
+        {
+            "name": "npm-asset/eonasdan-bootstrap-datetimepicker",
+            "version": "4.17.46",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/eonasdan-bootstrap-datetimepicker/-/eonasdan-bootstrap-datetimepicker-4.17.46.tgz",
+                "reference": null,
+                "shasum": "d143e0f09830d3e1671d52d17a61fcef65e7d527"
+            },
+            "require": {
+                "npm-asset/bootstrap": ">=3.3.0,<4.0.0",
+                "npm-asset/jquery": ">=1.8.3,<2.0.0|>=2.0.0,<3.0.0",
+                "npm-asset/moment": ">=2.10.0,<3.0.0",
+                "npm-asset/moment-timezone": ">=0.4.0,<0.5.0"
+            },
+            "require-dev": {
+                "npm-asset/grunt": "dev-default|*",
+                "npm-asset/grunt-contrib-connect": ">=1.0.1,<2.0.0",
+                "npm-asset/grunt-contrib-jasmine": ">=1.0.3,<2.0.0",
+                "npm-asset/grunt-contrib-jshint": "dev-default|*",
+                "npm-asset/grunt-contrib-less": "dev-default|*",
+                "npm-asset/grunt-contrib-uglify": "dev-default|*",
+                "npm-asset/grunt-env": ">=0.4.4,<0.5.0",
+                "npm-asset/grunt-jscs": "dev-default|*",
+                "npm-asset/grunt-nuget": ">=0.1.5,<0.2.0",
+                "npm-asset/grunt-string-replace": "dev-default|*",
+                "npm-asset/load-grunt-tasks": "dev-default|*"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/eonasdan/bootstrap-datetimepicker/issues"
+                },
+                "npm-asset-main": "src/js/bootstrap-datetimepicker.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/eonasdan/bootstrap-datetimepicker.git"
+                },
+                "npm-asset-scripts": []
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Peterson"
+                }
+            ],
+            "description": "A date/time picker component designed to work with Bootstrap 3 and Momentjs. For usage, installation and demos see Project Site on GitHub",
+            "homepage": "http://eonasdan.github.io/bootstrap-datetimepicker/",
+            "keywords": [
+                "bootstrap",
+                "datepicker",
+                "datetimepicker",
+                "moment",
+                "timepicker",
+                "twitter-bootstrap"
+            ]
+        },
+        {
+            "name": "npm-asset/esprima",
+            "version": "1.0.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/esprima/-/esprima-1.0.4.tgz",
+                "reference": null,
+                "shasum": "9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
+            },
+            "bin": {
+                "esparse": "./bin/esparse.js",
+                "esvalidate": "./bin/esvalidate.js"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-files": [
+                    "bin",
+                    "test/run.js",
+                    "test/runner.js",
+                    "test/test.js",
+                    "test/compat.js",
+                    "test/reflect.js",
+                    "esprima.js"
+                ],
+                "npm-asset-main": "esprima.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "http://github.com/ariya/esprima.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "node test/run.js",
+                    "benchmark": "node test/benchmarks.js",
+                    "benchmark-quick": "node test/benchmarks.js quick"
+                },
+                "npm-asset-engines": {
+                    "node": ">=0.4.0"
+                }
+            },
+            "description": "ECMAScript parsing infrastructure for multipurpose analysis",
+            "homepage": "http://esprima.org",
+            "keywords": [
+                "ast",
+                "ecmascript",
+                "javascript",
+                "parser",
+                "syntax"
+            ]
+        },
+        {
+            "name": "npm-asset/font-awesome",
+            "version": "4.7.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/font-awesome/-/font-awesome-4.7.0.tgz",
+                "reference": null,
+                "shasum": "8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "http://github.com/FortAwesome/Font-Awesome/issues"
+                },
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/FortAwesome/Font-Awesome.git"
+                },
+                "npm-asset-scripts": [],
+                "npm-asset-engines": {
+                    "node": ">=0.10.3"
+                }
+            },
+            "license": [
+                "(OFL-1.1 AND MIT)"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Gandy",
+                    "email": "dave@fontawesome.io",
+                    "url": "http://twitter.com/davegandy"
+                },
+                {
+                    "name": "Brian Talbot",
+                    "url": "http://twitter.com/talbs"
+                },
+                {
+                    "name": "Travis Chase",
+                    "url": "http://twitter.com/supercodepoet"
+                },
+                {
+                    "name": "Rob Madole",
+                    "url": "http://twitter.com/robmadole"
+                },
+                {
+                    "name": "Geremia Taglialatela",
+                    "url": "http://twitter.com/gtagliala"
+                }
+            ],
+            "description": "The iconic font and CSS framework",
+            "homepage": "http://fontawesome.io/",
+            "keywords": [
+                "awesome",
+                "bootstrap",
+                "font",
+                "font",
+                "fontawesome",
+                "icon"
+            ]
+        },
+        {
+            "name": "npm-asset/humanize",
+            "version": "0.0.9",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/humanize/-/humanize-0.0.9.tgz",
+                "reference": null,
+                "shasum": "1994ffaecdfe9c441ed2bdac7452b7bb4c9e41a4"
+            },
+            "require-dev": {
+                "npm-asset/jshint": "0.7.1",
+                "npm-asset/mocha": "1.0.3",
+                "npm-asset/should": "0.6.3"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/taijinlee/humanize/issues"
+                },
+                "npm-asset-main": "humanize.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/taijinlee/humanize.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "./node_modules/jshint/bin/hint humanize.js; find specs -type f -a -name *.spec.js -exec ./node_modules/mocha/bin/mocha --globals requirejsVars -R list --require should {} \\;"
+                },
+                "npm-asset-optional-dependencies": [],
+                "npm-asset-engines": {
+                    "node": "*"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Tai-Jin Lee",
+                    "email": "taijin@gmail.com"
+                }
+            ],
+            "description": "Javascript string formatter for human readability",
+            "homepage": "https://github.com/taijinlee/humanize",
+            "keywords": [
+                "browser",
+                "client",
+                "util"
+            ]
+        },
+        {
+            "name": "npm-asset/jquery",
+            "version": "2.2.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery/-/jquery-2.2.4.tgz",
+                "reference": null,
+                "shasum": "2c89d6889b5eac522a7eea32c14521559c6cbf02"
+            },
+            "require-dev": {
+                "npm-asset/commitplease": "2.0.0",
+                "npm-asset/core-js": "0.9.17",
+                "npm-asset/grunt": "0.4.5",
+                "npm-asset/grunt-babel": "5.0.1",
+                "npm-asset/grunt-cli": "0.1.13",
+                "npm-asset/grunt-compare-size": "0.4.0",
+                "npm-asset/grunt-contrib-jshint": "0.11.2",
+                "npm-asset/grunt-contrib-uglify": "0.9.2",
+                "npm-asset/grunt-contrib-watch": "0.6.1",
+                "npm-asset/grunt-git-authors": "2.0.1",
+                "npm-asset/grunt-jscs": "2.1.0",
+                "npm-asset/grunt-jsonlint": "1.0.4",
+                "npm-asset/grunt-npmcopy": "0.1.0",
+                "npm-asset/gzip-js": "0.3.2",
+                "npm-asset/jsdom": "5.6.1",
+                "npm-asset/load-grunt-tasks": "1.0.0",
+                "npm-asset/qunit-assert-step": "1.0.3",
+                "npm-asset/qunitjs": "1.17.1",
+                "npm-asset/requirejs": "2.1.17",
+                "npm-asset/sinon": "1.10.3",
+                "npm-asset/sizzle": "2.2.1",
+                "npm-asset/strip-json-comments": "1.0.3",
+                "npm-asset/testswarm": "1.1.0",
+                "npm-asset/win-spawn": "2.0.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/jquery/jquery/issues"
+                },
+                "npm-asset-main": "dist/jquery.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/jquery/jquery.git"
+                },
+                "npm-asset-scripts": {
+                    "build": "npm install && grunt",
+                    "start": "grunt watch",
+                    "test": "grunt && grunt test"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jQuery Foundation and other contributors",
+                    "url": "https://github.com/jquery/jquery/blob/2.2.4/AUTHORS.txt"
+                }
+            ],
+            "description": "JavaScript library for DOM operations",
+            "homepage": "http://jquery.com",
+            "keywords": [
+                "browser",
+                "javascript",
+                "jquery",
+                "library"
+            ]
+        },
+        {
+            "name": "npm-asset/microplugin",
+            "version": "0.0.3",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/microplugin/-/microplugin-0.0.3.tgz",
+                "reference": null,
+                "shasum": "1fc2e1bb7c9e19e82bd84bba9137bbe71250d8cd"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-main": "src/microplugin.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/brianreavis/microplugin.js.git"
+                },
+                "npm-asset-engines": {
+                    "node": "*"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Brian Reavis",
+                    "email": "brian@thirdroute.com"
+                }
+            ],
+            "description": "A lightweight plugin / dependency system for javascript libraries.",
+            "keywords": [
+                "architecture",
+                "dependencies",
+                "extensibility",
+                "plugins",
+                "require"
+            ]
+        },
+        {
+            "name": "npm-asset/microtime",
+            "version": "2.1.2",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/microtime/-/microtime-2.1.2.tgz",
+                "reference": null,
+                "shasum": "9c955d0781961ab13a1b6f9a82b080f5d7ecd83b"
+            },
+            "require": {
+                "npm-asset/bindings": "dev-1.2.x|1.2.x",
+                "npm-asset/nan": "dev-2.4.x|2.4.x"
+            },
+            "require-dev": {
+                "npm-asset/clang-format": ">=1.0.38,<2.0.0",
+                "npm-asset/standard": ">=7.0.1,<8.0.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/wadey/node-microtime/issues"
+                },
+                "npm-asset-main": "./index",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/wadey/node-microtime.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "node test.js",
+                    "format": "clang-format -i src/microtime.cc",
+                    "lint": "standard && clang-format -output-replacements-xml src/microtime.cc | (! grep -q '<replacement ')",
+                    "install": "node-gyp rebuild"
+                },
+                "npm-asset-engines": {
+                    "node": ">= 0.8.0"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wade Simmons",
+                    "email": "wade@wades.im",
+                    "url": "http://wades.im/mons"
+                }
+            ],
+            "description": "Get the current time in microseconds",
+            "homepage": "https://github.com/wadey/node-microtime"
+        },
+        {
+            "name": "npm-asset/minimist",
+            "version": "0.0.10",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz",
+                "reference": null,
+                "shasum": "de3f98543dbf96082be48ad1a0c7cda836301dcf"
+            },
+            "require-dev": {
+                "npm-asset/tap": "~0.4.0",
+                "npm-asset/tape": "~1.0.4"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/substack/minimist/issues"
+                },
+                "npm-asset-main": "index.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/substack/minimist.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "tap test/*.js"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Halliday",
+                    "email": "mail@substack.net",
+                    "url": "http://substack.net"
+                }
+            ],
+            "description": "parse argument options",
+            "homepage": "https://github.com/substack/minimist",
+            "keywords": [
+                "argv",
+                "getopt",
+                "optimist",
+                "parser"
+            ]
+        },
+        {
+            "name": "npm-asset/moment",
+            "version": "2.17.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/moment/-/moment-2.17.1.tgz",
+                "reference": null,
+                "shasum": "fed9506063f36b10f066c8b59a144d7faebe1d82"
+            },
+            "require-dev": {
+                "npm-asset/benchmark": "dev-default|*",
+                "npm-asset/coveralls": ">=2.11.2,<3.0.0",
+                "npm-asset/es6-promise": "dev-default|*",
+                "npm-asset/grunt": "~0.4",
+                "npm-asset/grunt-benchmark": "dev-default|*",
+                "npm-asset/grunt-cli": "dev-default|*",
+                "npm-asset/grunt-contrib-clean": "dev-default|*",
+                "npm-asset/grunt-contrib-concat": "dev-default|*",
+                "npm-asset/grunt-contrib-copy": "dev-default|*",
+                "npm-asset/grunt-contrib-jshint": "dev-default|*",
+                "npm-asset/grunt-contrib-uglify": "dev-default|*",
+                "npm-asset/grunt-contrib-watch": "dev-default|*",
+                "npm-asset/grunt-env": "dev-default|*",
+                "npm-asset/grunt-exec": "dev-default|*",
+                "npm-asset/grunt-jscs": "dev-default|*",
+                "npm-asset/grunt-karma": "dev-default|*",
+                "npm-asset/grunt-nuget": "dev-default|*",
+                "npm-asset/grunt-string-replace": "dev-default|*",
+                "npm-asset/karma": "dev-default|*",
+                "npm-asset/karma-chrome-launcher": "dev-default|*",
+                "npm-asset/karma-firefox-launcher": "dev-default|*",
+                "npm-asset/karma-qunit": "dev-default|*",
+                "npm-asset/karma-sauce-launcher": "dev-default|*",
+                "npm-asset/load-grunt-tasks": "dev-default|*",
+                "npm-asset/nyc": ">=2.1.4,<3.0.0",
+                "npm-asset/qunit": ">=0.7.5,<0.8.0",
+                "npm-asset/qunit-cli": ">=0.1.4,<0.2.0",
+                "npm-asset/rollup": "dev-default|*",
+                "npm-asset/spacejam": "dev-default|*",
+                "npm-asset/typescript": ">=1.8.10,<2.0.0",
+                "npm-asset/uglify-js": "dev-default|*"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/moment/moment/issues"
+                },
+                "npm-asset-main": "./moment.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/moment/moment.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "grunt test",
+                    "coverage": "nyc npm test && nyc report",
+                    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+                },
+                "npm-asset-engines": {
+                    "node": "*"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iskren Ivov Chernev",
+                    "email": "iskren.chernev@gmail.com",
+                    "url": "https://github.com/ichernev"
+                },
+                {
+                    "name": "Tim Wood",
+                    "email": "washwithcare@gmail.com",
+                    "url": "http://timwoodcreates.com/"
+                },
+                {
+                    "name": "Rocky Meza",
+                    "url": "http://rockymeza.com"
+                },
+                {
+                    "name": "Matt Johnson",
+                    "email": "mj1856@hotmail.com",
+                    "url": "http://codeofmatt.com"
+                },
+                {
+                    "name": "Isaac Cambron",
+                    "email": "isaac@isaaccambron.com",
+                    "url": "http://isaaccambron.com"
+                },
+                {
+                    "name": "Andre Polykanine",
+                    "email": "andre@oire.org",
+                    "url": "https://github.com/oire"
+                }
+            ],
+            "description": "Parse, validate, manipulate, and display dates",
+            "homepage": "http://momentjs.com",
+            "keywords": [
+                "date",
+                "ender",
+                "format",
+                "i18n",
+                "l10n",
+                "moment",
+                "parse",
+                "time",
+                "validate"
+            ]
+        },
+        {
+            "name": "npm-asset/moment-timezone",
+            "version": "0.4.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.4.1.tgz",
+                "reference": null,
+                "shasum": "81f598c3ad5e22cdad796b67ecd8d88d0f5baa06"
+            },
+            "require": {
+                "npm-asset/moment": ">=2.6.0"
+            },
+            "require-dev": {
+                "npm-asset/grunt": "0.4.5",
+                "npm-asset/grunt-contrib-clean": "0.6.0",
+                "npm-asset/grunt-contrib-jshint": "0.11.2",
+                "npm-asset/grunt-contrib-nodeunit": "0.4.1",
+                "npm-asset/grunt-contrib-uglify": "0.9.1"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/moment/moment-timezone/issues"
+                },
+                "npm-asset-main": "./index.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "https://github.com/moment/moment-timezone.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "grunt"
+                },
+                "npm-asset-engines": {
+                    "node": "*"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Wood",
+                    "email": "washwithcare@gmail.com",
+                    "url": "http://timwoodcreates.com/"
+                }
+            ],
+            "description": "Parse and display moments in any timezone.",
+            "homepage": "http://momentjs.com/timezone/",
+            "keywords": [
+                "date",
+                "iana",
+                "moment",
+                "olson",
+                "time",
+                "timezone",
+                "tz",
+                "zone"
+            ]
+        },
+        {
+            "name": "npm-asset/nan",
+            "version": "2.4.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/nan/-/nan-2.4.0.tgz",
+                "reference": null,
+                "shasum": "fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
+            },
+            "require-dev": {
+                "npm-asset/bindings": "~1.2.1",
+                "npm-asset/commander": ">=2.8.1,<3.0.0",
+                "npm-asset/glob": ">=5.0.14,<6.0.0",
+                "npm-asset/node-gyp": "~3.0.1",
+                "npm-asset/readable-stream": ">=2.1.4,<3.0.0",
+                "npm-asset/tap": "~0.7.1",
+                "npm-asset/xtend": "~4.0.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/nodejs/nan/issues"
+                },
+                "npm-asset-main": "include_dirs.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/nodejs/nan.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "tap --gc --stderr test/js/*-test.js",
+                    "rebuild-tests": "node-gyp rebuild --msvs_version=2013 --directory test",
+                    "docs": "doc/.build.sh"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rod Vagg",
+                    "email": "r@va.gg",
+                    "url": "https://github.com/rvagg"
+                },
+                {
+                    "name": "Benjamin Byholm",
+                    "email": "bbyholm@abo.fi",
+                    "url": "https://github.com/kkoopa/"
+                },
+                {
+                    "name": "Trevor Norris",
+                    "email": "trev.norris@gmail.com",
+                    "url": "https://github.com/trevnorris"
+                },
+                {
+                    "name": "Nathan Rajlich",
+                    "email": "nathan@tootallnate.net",
+                    "url": "https://github.com/TooTallNate"
+                },
+                {
+                    "name": "Brett Lawson",
+                    "email": "brett19@gmail.com",
+                    "url": "https://github.com/brett19"
+                },
+                {
+                    "name": "Ben Noordhuis",
+                    "email": "info@bnoordhuis.nl",
+                    "url": "https://github.com/bnoordhuis"
+                },
+                {
+                    "name": "David Siegel",
+                    "email": "david@artcom.de",
+                    "url": "https://github.com/agnat"
+                }
+            ],
+            "description": "Native Abstractions for Node.js: C++ header for Node 0.8 -> 6 compatibility",
+            "homepage": "https://github.com/nodejs/nan#readme"
+        },
+        {
+            "name": "npm-asset/optimist",
+            "version": "0.6.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
+                "reference": null,
+                "shasum": "da3ea74686fa21a19a111c326e90eb15a0196686"
+            },
+            "require": {
+                "npm-asset/minimist": "~0.0.1",
+                "npm-asset/wordwrap": "~0.0.2"
+            },
+            "require-dev": {
+                "npm-asset/hashish": "~0.0.4",
+                "npm-asset/tap": "~0.4.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/substack/node-optimist/issues"
+                },
+                "npm-asset-main": "./index.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "http://github.com/substack/node-optimist.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "tap ./test/*.js"
+                }
+            },
+            "license": [
+                "MIT/X11"
+            ],
+            "authors": [
+                {
+                    "name": "James Halliday",
+                    "email": "mail@substack.net",
+                    "url": "http://substack.net"
+                }
+            ],
+            "description": "Light-weight option parsing with an argv hash. No optstrings attached.",
+            "homepage": "https://github.com/substack/node-optimist",
+            "keywords": [
+                "args",
+                "argument",
+                "cli",
+                "command",
+                "option",
+                "parser",
+                "parsing"
+            ]
+        },
+        {
+            "name": "npm-asset/redeyed",
+            "version": "0.4.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/redeyed/-/redeyed-0.4.4.tgz",
+                "reference": null,
+                "shasum": "37e990a6f2b21b2a11c2e6a48fd4135698cba97f"
+            },
+            "require": {
+                "npm-asset/esprima": "~1.0.4"
+            },
+            "require-dev": {
+                "npm-asset/cardinal": "~0.4.4",
+                "npm-asset/readdirp": "~0.3.3",
+                "npm-asset/tap": "~0.4.8"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/thlorenz/redeyed/issues"
+                },
+                "npm-asset-main": "redeyed.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/thlorenz/redeyed.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "tap test/*.js",
+                    "demo-log": "node examples/replace-log",
+                    "demo": "cd examples/browser; open index.html"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thorsten Lorenz",
+                    "email": "thlorenz@gmx.de",
+                    "url": "thlorenz.com"
+                }
+            ],
+            "description": "Takes JavaScript code, along with a config and returns the original code with tokens wrapped as configured.",
+            "homepage": "https://github.com/thlorenz/redeyed",
+            "keywords": [
+                "ast",
+                "metadata",
+                "source",
+                "syntax",
+                "tree",
+                "wrap"
+            ]
+        },
+        {
+            "name": "npm-asset/selectize",
+            "version": "0.12.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/selectize/-/selectize-0.12.4.tgz",
+                "reference": null,
+                "shasum": "50c697526b609dea11da153cf7252b98948f4c0e"
+            },
+            "require": {
+                "npm-asset/microplugin": "0.0.3",
+                "npm-asset/sifter": ">=0.5.1,<0.6.0"
+            },
+            "require-dev": {
+                "npm-asset/chai": ">=3.5.0,<4.0.0",
+                "npm-asset/grunt": "dev-0.4.x|0.4.x",
+                "npm-asset/grunt-bower-task": ">=0.4.0,<0.5.0",
+                "npm-asset/grunt-cli": ">=0.1.13,<0.2.0",
+                "npm-asset/grunt-contrib-clean": "dev-0.5.x|0.5.x",
+                "npm-asset/grunt-contrib-concat": "dev-0.3.x|0.3.x",
+                "npm-asset/grunt-contrib-connect": "dev-1.x|1.x",
+                "npm-asset/grunt-contrib-copy": "dev-0.4.x|0.4.x",
+                "npm-asset/grunt-contrib-less": "~0.9.0",
+                "npm-asset/grunt-contrib-uglify": "~1.0.1",
+                "npm-asset/grunt-contrib-watch": "dev-1.x|1.x",
+                "npm-asset/grunt-recess": "dev-0.5.x|0.5.x",
+                "npm-asset/grunt-replace": "dev-0.4.x|0.4.x",
+                "npm-asset/karma": ">=0.12.31,<0.13.0",
+                "npm-asset/karma-chai": ">=0.1.0,<0.2.0",
+                "npm-asset/karma-chrome-launcher": ">=0.1.7,<0.2.0",
+                "npm-asset/karma-coverage": ">=0.2.7,<0.3.0",
+                "npm-asset/karma-coveralls": ">=0.1.5,<0.2.0",
+                "npm-asset/karma-firefox-launcher": ">=0.1.4,<0.2.0",
+                "npm-asset/karma-mocha": ">=0.1.10,<0.2.0",
+                "npm-asset/karma-mocha-reporter": ">=0.3.1,<0.4.0",
+                "npm-asset/karma-phantomjs-launcher": ">=1.0.1,<2.0.0",
+                "npm-asset/karma-safari-launcher": ">=0.1.1,<0.2.0",
+                "npm-asset/karma-sauce-launcher": ">=0.2.10,<0.3.0",
+                "npm-asset/mocha": ">=3.1.0,<4.0.0"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/selectize/selectize.js/issues"
+                },
+                "npm-asset-main": "dist/js/selectize.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/selectize/selectize.js.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "./node_modules/karma/bin/karma start"
+                },
+                "npm-asset-engines": {
+                    "node": "*"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Reavis",
+                    "email": "brian@thirdroute.com"
+                }
+            ],
+            "description": "Selectize is a jQuery-based custom <select> UI control. Useful for tagging, contact lists, country selectors, etc.",
+            "homepage": "https://github.com/selectize/selectize.js#readme",
+            "keywords": [
+                "autocomplete",
+                "control",
+                "form",
+                "input",
+                "select",
+                "tag",
+                "tagging",
+                "ui"
+            ]
+        },
+        {
+            "name": "npm-asset/sifter",
+            "version": "0.5.2",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/sifter/-/sifter-0.5.2.tgz",
+                "reference": null,
+                "shasum": "4702e3cee3036903da1f194b29e6dc7a4fb59abe"
+            },
+            "require": {
+                "npm-asset/async": "dev-0.2.x|0.2.x",
+                "npm-asset/cardinal": "dev-0.4.x|0.4.x",
+                "npm-asset/csv-parse": ">=1.1.7,<2.0.0",
+                "npm-asset/humanize": "dev-0.0.x|0.0.x",
+                "npm-asset/microtime": ">=2.1.0,<3.0.0",
+                "npm-asset/optimist": "dev-0.6.x|0.6.x"
+            },
+            "require-dev": {
+                "npm-asset/coveralls": "dev-2.3.x|2.3.x",
+                "npm-asset/istanbul": "dev-0.1.x|0.1.x",
+                "npm-asset/mocha": "dev-1.12.x|1.12.x",
+                "npm-asset/mocha-istanbul": "dev-0.2.x|0.2.x",
+                "npm-asset/mocha-lcov-reporter": "dev-0.0.x|0.0.x",
+                "npm-asset/uglify-js": "dev-2.4.x|2.4.x"
+            },
+            "bin": {
+                "sifter": "./bin/sifter.js"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/brianreavis/sifter.js/issues"
+                },
+                "npm-asset-main": "./sifter.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/brianreavis/sifter.js.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "mocha -R list"
+                },
+                "npm-asset-optional-dependencies": {
+                    "microtime": "^2.1.0"
+                },
+                "npm-asset-engines": {
+                    "node": "*"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Reavis",
+                    "email": "brian@thirdroute.com"
+                }
+            ],
+            "description": "A library for textually searching arrays and hashes of objects by property (or multiple properties). Designed specifically for autocomplete.",
+            "homepage": "https://github.com/brianreavis/sifter.js#readme",
+            "keywords": [
+                "autocomplete",
+                "data",
+                "filter",
+                "match",
+                "results",
+                "search",
+                "sift",
+                "sort"
+            ]
+        },
+        {
+            "name": "npm-asset/wordwrap",
+            "version": "0.0.3",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
+                "reference": null,
+                "shasum": "a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+            },
+            "require-dev": {
+                "npm-asset/expresso": "0.7.x"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/substack/node-wordwrap/issues"
+                },
+                "npm-asset-main": "./index.js",
+                "npm-asset-directories": {
+                    "lib": ".",
+                    "example": "example",
+                    "test": "test"
+                },
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/substack/node-wordwrap.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "expresso"
+                },
+                "npm-asset-engines": {
+                    "node": ">=0.4.0"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Halliday",
+                    "email": "mail@substack.net",
+                    "url": "http://substack.net"
+                }
+            ],
+            "description": "Wrap those words. Show them at what columns to start and stop.",
+            "homepage": "https://github.com/substack/node-wordwrap#readme",
+            "keywords": [
+                "column",
+                "format",
+                "rule",
+                "word",
+                "wrap"
+            ]
+        },
+        {
+            "name": "oyejorge/less.php",
+            "version": "v1.7.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oyejorge/less.php.git",
+                "reference": "a1e2d3c20794b37ac4d0baeb24613e579584033b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oyejorge/less.php/zipball/a1e2d3c20794b37ac4d0baeb24613e579584033b",
+                "reference": "a1e2d3c20794b37ac4d0baeb24613e579584033b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.18"
+            },
+            "bin": [
+                "bin/lessc"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Less": "lib/"
+                },
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Agar",
+                    "homepage": "https://github.com/agar"
+                },
+                {
+                    "name": "Martin Jantošovič",
+                    "homepage": "https://github.com/Mordred"
+                },
+                {
+                    "name": "Josh Schmidt",
+                    "homepage": "https://github.com/oyejorge"
+                }
+            ],
+            "description": "PHP port of the Javascript version of LESS http://lesscss.org",
+            "homepage": "http://lessphp.gpeasy.com",
+            "keywords": [
+                "css",
+                "less",
+                "less.js",
+                "lesscss",
+                "php",
+                "stylesheet"
+            ],
+            "time": "2015-12-30 05:47:36"
+        },
+        {
+            "name": "tedivm/jshrink",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/JShrink.git",
+                "reference": "688527a2e854d7935f24f24c7d5eb1b604742bf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/JShrink/zipball/688527a2e854d7935f24f24c7d5eb1b604742bf9",
+                "reference": "688527a2e854d7935f24f24c7d5eb1b604742bf9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "0.4.0",
+                "phpunit/phpunit": "4.0.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JShrink": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "Javascript Minifier built in PHP",
+            "homepage": "http://github.com/tedious/JShrink",
+            "keywords": [
+                "javascript",
+                "minifier"
+            ],
+            "time": "2015-07-04 07:35:09"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6.4"
+    },
+    "platform-dev": []
+}
