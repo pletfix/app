@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c26219334f571511472e0017f25c2c8",
-    "content-hash": "6f2d7aea7a76395129d2c055ccf19aac",
+    "hash": "a0af12f730e51d6dac39aa67e0ed51b4",
+    "content-hash": "988d21872d2f2155942cf5a529fe7825",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -333,6 +333,58 @@
             "time": "2016-11-26 00:15:39"
         },
         {
+            "name": "pletfix/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:pletfix/core.git",
+                "reference": "f8890f85ed01ba9ca7ab63b86c52054f230d56bf"
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Core\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Frank Rohlfing",
+                    "email": "mail@frank-rohlfing.de"
+                }
+            ],
+            "description": "The Pletfix Core.",
+            "time": "2017-02-09 01:14:19"
+        },
+        {
+            "name": "pletfix/hello",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:pletfix/hello.git",
+                "reference": "15080289151c1a55f7d3a5b82593f54c8ee54009"
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pletfix\\Hello\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Frank Rohlfing",
+                    "email": "mail@frank-rohlfing.de"
+                }
+            ],
+            "description": "A Pletfix Plugin Example.",
+            "time": "2017-02-08 21:22:07"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -483,63 +535,6 @@
                 "stylesheet"
             ],
             "time": "2016-09-11 01:34:11"
-        },
-        {
-            "name": "linkorb/jsmin-php",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/linkorb/jsmin-php.git",
-                "reference": "be85d87fc9c27730e7e9ced742b13010dafc1026"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/linkorb/jsmin-php/zipball/be85d87fc9c27730e7e9ced742b13010dafc1026",
-                "reference": "be85d87fc9c27730e7e9ced742b13010dafc1026",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Joost Faassen",
-                    "email": "j.faassen@linkorb.com",
-                    "role": "Packaging for composer"
-                },
-                {
-                    "name": "Ryan Grove",
-                    "email": "ryan@wonko.com",
-                    "role": "PHP port"
-                },
-                {
-                    "name": "Adam Gofort",
-                    "email": "aag@adamgoforth.com",
-                    "role": "Updates to the PHP port"
-                },
-                {
-                    "name": "Douglas Crockford",
-                    "email": "douglas@crockford.com"
-                }
-            ],
-            "description": "Unofficial package of jsmin-php",
-            "homepage": "http://www.github.com/linkorb/jsmin-php",
-            "keywords": [
-                "javascript",
-                "jsmin",
-                "minify"
-            ],
-            "time": "2013-03-15 13:16:35"
         },
         {
             "name": "natxet/CssMin",
@@ -2059,9 +2054,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "pletfix/core": 20,
+        "pletfix/hello": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6.4"

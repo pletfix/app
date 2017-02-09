@@ -10,6 +10,6 @@
 
 @yield('content')
 
-<p>End of Layout</p>
+<p>End of Layout.</p>
 </body>
 </html>

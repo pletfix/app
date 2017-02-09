@@ -1,0 +1,14 @@
+1)
+im core greift die files-Direktive in composer.json nicht:
+  "files": [
+      "functions/helpers.php",
+      "functions/http_status.php",
+      "functions/services.php"
+  ],
+
+Daher hab ich als Workaround in der App in comopser.json die Einträge vorgenommen
+
+        "files": [
+            "vendor/pletfix/core/functions/helpers.php",
+            "vendor/pletfix/core/functions/http_status.php",
+            "vendor/pletfix/core/functions/services.php"
