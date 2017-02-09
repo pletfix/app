@@ -1,19 +1,23 @@
-The Pletfix Application Skeleton.
-=================================
+#The Pletfix Application Skeleton.
 
 Author: Frank Rohlfing <mail@frank-rohlfing.de>
 
-Server Requirements
--------------------
+##About Pletfix
+
+Pletfix is going to be an easy to learn and fastled PHP framework.
+
+But currently, Pletfix is **under construction** and not ready to use yet!
+
+Please have patience with us :-)
+
+##Server Requirements
 
 - PHP >= 5.6.4
 - [Composer](https://getcomposer.org/)
 
-
-Installing Pletfix Application
-------------------------------
+##Installing Pletfix Application
  
-1) Download files
+**1) Download files**
 
 Install Pletfix by entered the Composer create-project command in your terminal:
 
@@ -25,7 +29,7 @@ The command above will create a fresh Pletfix Application in the directory you s
 
 At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?", something you should answer with Y(es).
 
-2) Directory Permissions
+**2) Directory Permissions**
 
 After download Pletfix, you may create the folder `storage` with following subfolders:
 
@@ -46,11 +50,15 @@ You may change the permissions as below:
     chmod g+s *
 ~~~
 
-3) Environment
+**3) Environment**
 
 Rename the file `.env.example` to `.env`and modify the entries as you need.
  
-4) Additional Configuration
+**4) Additional Configuration**
 
-Customize the configuration files stored in `config` folder
+Customize the configuration files stored in `config` folder.
+
+##License
+
+The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)..
  
