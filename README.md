@@ -14,6 +14,7 @@ Please have patience with us :-)
 
 - PHP >= 5.6.4
 - [Composer](https://getcomposer.org/)
+- [NPM/Bower Dependency Manager for Composer](https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md) (a global scope installation is required!)
 
 ##Installing Pletfix Application
  
