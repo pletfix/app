@@ -12,7 +12,29 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Stadtkonfetti',
+    'name' => 'Pletfix Application',
+
+    /*
+     |--------------------------------------------------------------------------
+     | App Version
+     |--------------------------------------------------------------------------
+     |
+     | Defines the Code Version.
+     |
+     */
+
+    'version' => '0.0.1',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application URL
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the canonical URL of the application.
+    |
+    */
+
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,19 +63,6 @@ return [
     */
 
     'debug' => env('APP_DEBUG', false),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Application URL
-    |--------------------------------------------------------------------------
-    |
-    | This URL is used by the console to properly generate URLs when using
-    | the Artisan command line tool. You should set this to the root of
-    | your application so that it is used when running Artisan tasks.
-    |
-    */
-
-    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -127,8 +136,6 @@ return [
     |
     */
 
-    //'log' => 'daily',
-    //'log' => env('APP_LOG', 'single'),
     'log' => [
         'type'       => env('LOG_TYPE',  'daily'),
         'level'      => env('LOG_LEVEL', 'debug'),
@@ -159,78 +166,4 @@ return [
             'datetime' => 'Y-m-d H:i',
         ],
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Adverts
-    |--------------------------------------------------------------------------
-    |
-    | Number of adverts per frame.
-    |
-    */
-
-    'max_adverts_right' => 5,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Google Analytics
-    |--------------------------------------------------------------------------
-    |
-    | If you haven't already done so, set up a Google Analtyics property:
-    |   https://support.google.com/analytics/answer/1042508
-    |
-    | View the Google Analytics Dashboard:
-    |   https://www.google.com/analytics/web
-    |
-    */
-
-    'google_analytics_tracking_id' => env('GOOGLE_ANALYTICS_TRACKING_ID'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Google API Key for Browser
-    |--------------------------------------------------------------------------
-    |
-    | Order a API Key for Google Maps Javascript API here:
-    |   https://developers.google.com/maps
-    |
-    */
-
-    'google_api_browser_key' => env('GOOGLE_API_BROWSER_KEY'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Google API Key for Server
-    |--------------------------------------------------------------------------
-    |
-    | Order a API Key for Google Maps Geocoding API here:
-    |   https://developers.google.com/maps
-    |
-    */
-
-    'google_api_server_key' => env('GOOGLE_API_SERVER_KEY'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Google AdSense
-    |--------------------------------------------------------------------------
-    |
-    | See https://www.google.com/adsense/new/u/0/pub-8674118511227553/home
-    |
-    */
-
-    'google_ad_client' => env('GOOGLE_AD_CLIENT'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Blogfoster
-    |--------------------------------------------------------------------------
-    |
-    | See https://app.blogfoster.com/websites/7785/insights/integration-instructions
-    |
-    */
-
-    'blogfoster_website_id' => env('BLOGFOSTER_WEBSITE_ID'),
-    'blogfoster_adslot_id'  => env('BLOGFOSTER_ADSLOT_ID'),
-
 ];

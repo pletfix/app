@@ -207,31 +207,4 @@ jQuery(document).ready(function($) {
             } : undefined
         });
     });
-
-    ///**
-    // * Make a AJAX request.
-    // * Deprecation Notice:
-    // * The jqXHR.success(), jqXHR.error(), and jqXHR.complete() callbacks are removed as of jQuery 3.0. You can use
-    // * jqXHR.done(), jqXHR.fail(), and jqXHR.always() instead.
-    // */
-    //function ajax(route, data, done, fail, allways)
-    //{
-    //    return $.ajax({
-    //        method: 'POST',
-    //        url: baseUrl + route, // + '?' + encodeURIComponent(query),
-    //        data: data
-    //    }).done(function (result) {
-    //        if (done) {
-    //            done(result); // success
-    //        }
-    //    }).fail(function (jqXHR, textStatus) {
-    //        if (fail) {
-    //            fail(textStatus);
-    //        }
-    //    }).always(function() {
-    //        if (allways) {
-    //            allways();
-    //        }
-    //    });
-    //}
 });

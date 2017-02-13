@@ -24,7 +24,6 @@ return [
     ],
 
     'fonts' => [
-        resource_path('assets/fonts'),
         vendor_path('npm-asset/bootstrap/dist/fonts'),
         vendor_path('npm-asset/font-awesome/fonts'),
     ],

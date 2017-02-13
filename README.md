@@ -4,7 +4,7 @@ Author: Frank Rohlfing <mail@frank-rohlfing.de>
 
 ##About Pletfix
 
-Pletfix is going to be an easy to learn and fastled PHP framework.
+Pletfix is going to be an easy to learn and fasted PHP framework.
 
 But currently, Pletfix is **under construction** and not ready to use yet!
 
@@ -35,9 +35,9 @@ At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..
 After download Pletfix, you may create the folder `storage` with following subfolders:
 
 ~~~
-    storage/
-        cache/
-        logs/
+storage/
+    cache/
+    logs/
 ~~~
 
 **Important:** All directories within the storage have to be writable by your web server! 
@@ -45,10 +45,10 @@ After download Pletfix, you may create the folder `storage` with following subfo
 You may change the permissions as below:
 
 ~~~
-    cd storage
-    chgrp www-data *
-    chmod 775 *
-    chmod g+s *
+cd storage
+chgrp www-data *
+chmod 775 *
+chmod g+s *
 ~~~
 
 **3) Environment**

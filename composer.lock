@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a0af12f730e51d6dac39aa67e0ed51b4",
-    "content-hash": "988d21872d2f2155942cf5a529fe7825",
+    "hash": "39924fde50510d763463dd34dcf08b4b",
+    "content-hash": "0020bc0630892a5a59c79ccc40a616da",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -357,32 +357,6 @@
             ],
             "description": "The Pletfix Core.",
             "time": "2017-02-09 01:14:19"
-        },
-        {
-            "name": "pletfix/hello",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:pletfix/hello.git",
-                "reference": "15080289151c1a55f7d3a5b82593f54c8ee54009"
-            },
-            "require": {
-                "php": ">=5.6.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pletfix\\Hello\\": "src/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Frank Rohlfing",
-                    "email": "mail@frank-rohlfing.de"
-                }
-            ],
-            "description": "A Pletfix Plugin Example.",
-            "time": "2017-02-08 21:22:07"
         },
         {
             "name": "psr/log",
@@ -2056,8 +2030,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "pletfix/core": 20,
-        "pletfix/hello": 20
+        "pletfix/core": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

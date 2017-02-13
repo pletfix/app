@@ -1,0 +1,22 @@
+# ----- Diesen Abschnitt entfernen, wenn der Schutz nicht mehr benötigt wrid ------------
+#AuthUserFile /mnt/rid/82/96/53988296/htdocs/.htuser
+#AuthName "Happy"
+#AuthType Basic
+#require user Redaktion 
+# -------------
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

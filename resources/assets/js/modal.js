@@ -1,4 +1,3 @@
-// todo template dynamisch generieren und in devtools aktualisieren
 /**
  * Displays a modal dialog box with a specified message, along with an OK and a Cancel button
  */
@@ -13,7 +12,6 @@ function modalConfirm(title, body, callback)
     });
 }
 
-// todo template dynamisch generieren und in devtools aktualisieren
 /**
  * Displays a modal alert box with a specified message and an OK button
  */

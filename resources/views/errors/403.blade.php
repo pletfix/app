@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="content">
-            <div class="title">Zugriff verweigert</div>
+            <div class="title">Access Denied</div>
         </div>
     </div>
 </body>
