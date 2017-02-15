@@ -22,7 +22,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}"/> {{-- for Phone and iPad --}}
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}" /> {{-- for Safari on Mac OS --}}
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}" /> {{-- for some other browsers, displayed in the tabs --}}
-    <link rel="manifest" href="{{ asset('manifest.json') }}"/> {{-- for Android Chrome --}}
+    {{--<link rel="manifest" href="{{ asset('manifest.json') }}"/> --}}{{-- for Android Chrome - it's a bug, browser will crash after loading page --}}
+    <!--suppress HtmlUnknownAttribute -->
     <link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#5bbad5"/>
     <meta name="theme-color" content="#ffffff"/>
 
