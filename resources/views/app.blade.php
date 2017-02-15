@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    <base href="{{ request()->baseUrl() }}"/>
-
-    <title>@yield('title', 'Pletfix')</title>
+    <title>@yield('title', 'Pletfix Application')</title>
 
     <!-- Meta Tags -->
 
@@ -11,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="@yield('description', 'Pletfix Homepage')" />
+    <meta name="base-url" content="{{ request()->baseUrl() }}"/>
 
     @yield('metas')
 

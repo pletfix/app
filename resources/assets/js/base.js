@@ -3,8 +3,8 @@ jQuery(document).ready(function($) {
     /**
      * Base URL of the application.
      */
-    window.baseUrl = $('base').attr('href').replace(/\/$/, '') + '/';
-    
+    window.baseUrl = $('meta[name="base-url"]').attr('content').replace(/\/$/, '') + '/';
+
     /**
      * Set the language of the datepickers.
      */
