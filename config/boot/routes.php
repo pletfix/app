@@ -6,4 +6,3 @@ $route->get('', 'HomeController@index');
 
 $route->get('test', function() {
 });
-

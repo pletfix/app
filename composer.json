@@ -16,25 +16,17 @@
     ],
     "require": {
         "php": ">=5.6.4",
-        "pletfix/core": "dev-master",
-        "aura/sqlquery": "^2.7",
-        "doctrine/cache": "^1.6",
-        "fightbulc/moment": "^1.25",
-        "jdorn/sql-formatter": "^1.2",
-        "monolog/monolog": "~1.11",
-        "vlucas/phpdotenv": "~2.2"
+        "pletfix/core": "dev-master"
     },
     "require-dev": {
-        "leafo/scssphp": "^0.6.6",
-        "natxet/cssmin": "^3.0",
+        "behat/mink": "^1.7",
+        "phpunit/phpunit": "^5.7|^6.0",
         "npm-asset/bootstrap": "^3.3.7",
         "npm-asset/eonasdan-bootstrap-datetimepicker": "^4.17.37",
         "npm-asset/font-awesome": "^4.6.3",
         "npm-asset/jquery": "^2.2.4",
         "npm-asset/moment": "^2.10",
-        "npm-asset/selectize": "^0.12.3",
-        "oyejorge/less.php": "v1.7.0.10",
-        "tedivm/jshrink": "^1.1"
+        "npm-asset/selectize": "^0.12.3"
     },
     "autoload": {
         "classmap": [

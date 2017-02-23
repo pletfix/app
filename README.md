@@ -1,8 +1,10 @@
-#The Pletfix Application Skeleton.
+# The Pletfix Application Skeleton.
 
 Author: Frank Rohlfing <mail@frank-rohlfing.de>
 
-##About Pletfix
+## About Pletfix
+
+This is a application skeleton with Responsive Design for the Pletfix framwork.
 
 Pletfix is going to be an easy to learn and fasted PHP framework.
 
@@ -10,13 +12,13 @@ But currently, Pletfix is **under construction** and not ready to use yet!
 
 Please have patience with us :-)
 
-##Server Requirements
+## Requirements
 
 - PHP >= 5.6.4
 - [Composer](https://getcomposer.org/)
 - [NPM/Bower Dependency Manager for Composer](https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md) (a global scope installation is required!)
 
-##Installing Pletfix Application
+## Installing Pletfix Application
  
 1. Download files
 
@@ -59,7 +61,7 @@ Please have patience with us :-)
 
     Customize the configuration files stored in `config` folder.
 
-##License
+## License
 
-The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)..
+The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
  
