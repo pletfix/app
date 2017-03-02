@@ -26,6 +26,6 @@ class ExampleTest extends MinkTestCase
             $title = $title->getText();
         }
 
-        $this->assertEquals($title, 'Pletfix Workbench');
+        $this->assertEquals($title, 'Pletfix Application');
     }
 }
