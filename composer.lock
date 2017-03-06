@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aad0236aa59e65e29ae5898902e26601",
-    "content-hash": "8ed3b434d9cfd3f31957e4dc6a4c5394",
+    "hash": "85f6a5b5df3ca5f6f379681dc0f8307c",
+    "content-hash": "4baa9eb30c2f6e89a4e29306dd2e9192",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -500,7 +500,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "3153e4fa3d3468cb6812567df32466a878caf54b"
+                "reference": "777fa179d8320d06701cdc2c4fd8bb9e86399fa4"
             },
             "require": {
                 "aura/sqlquery": "^2.7",
@@ -518,6 +518,7 @@
             },
             "require-dev": {
                 "behat/mink": "^1.7",
+                "behat/mink-browserkit-driver": "dev-master",
                 "behat/mink-goutte-driver": "^1.2",
                 "phpunit/phpunit": "^5.7|^6.0"
             },
@@ -534,7 +535,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-02-23 19:50:36"
+            "time": "2017-03-06 23:41:28"
         },
         {
             "name": "psr/log",
@@ -741,16 +742,16 @@
         },
         {
             "name": "behat/mink-browserkit-driver",
-            "version": "v1.3.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkBrowserKitDriver.git",
-                "reference": "10e67fb4a295efcd62ea0bf16025a85ea19534fb"
+                "reference": "1c9c8ad8838af33448d10baa57658b4cb55f23d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkBrowserKitDriver/zipball/10e67fb4a295efcd62ea0bf16025a85ea19534fb",
-                "reference": "10e67fb4a295efcd62ea0bf16025a85ea19534fb",
+                "url": "https://api.github.com/repos/minkphp/MinkBrowserKitDriver/zipball/1c9c8ad8838af33448d10baa57658b4cb55f23d6",
+                "reference": "1c9c8ad8838af33448d10baa57658b4cb55f23d6",
                 "shasum": ""
             },
             "require": {
@@ -760,8 +761,8 @@
                 "symfony/dom-crawler": "~2.3|~3.0"
             },
             "require-dev": {
-                "silex/silex": "~1.2",
-                "symfony/phpunit-bridge": "~2.7|~3.0"
+                "mink/driver-testsuite": "dev-master",
+                "symfony/http-kernel": "~2.3|~3.0"
             },
             "type": "mink-driver",
             "extra": {
@@ -793,7 +794,7 @@
                 "browser",
                 "testing"
             ],
-            "time": "2016-03-05 08:59:47"
+            "time": "2016-10-03 08:27:03"
         },
         {
             "name": "behat/mink-goutte-driver",
@@ -4025,7 +4026,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "pletfix/core": 20
+        "pletfix/core": 20,
+        "behat/mink-browserkit-driver": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

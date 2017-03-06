@@ -1,7 +1,7 @@
 <?php
 
-use App\Services\Contracts\Migration as MigrationContract;
-use App\Services\PDOs\Schemas\Contracts\Schema;
+use Core\Services\Contracts\Migration as MigrationContract;
+use Core\Services\PDOs\Schemas\Contracts\Schema;
 
 /**
  * Migration Class
@@ -14,7 +14,7 @@ class CreateTestTable implements MigrationContract
     public function up(Schema $schema)
     {
         $schema->createTable('test', [
-            'id'   => ['type' => 'identity'],
+            'id'      => ['type' => 'identity'],
             'string1' => ['type' => 'string'],
         ]);
     }

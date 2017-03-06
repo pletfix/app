@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    <base href="{{ request()->baseUrl() }}"/>
     <title>Error</title>
     <meta charset="utf-8"/>
+    <meta name="base-url" content="{{ request()->baseUrl() }}"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/error.css') }}"/>
     <!--suppress CssUnusedSymbol -->

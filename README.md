@@ -61,6 +61,16 @@ Please have patience with us :-)
 
     Customize the configuration files stored in `config` folder.
 
+5. Install Compser Packages
+
+    Enter this command to install the packages in the `vendor` folder:
+        
+        composer install
+        
+    > For the production system you may using the `no-dev` option:        
+    >    
+    >       composer insatll --no-dev
+    
 ## License
 
 The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
