@@ -4,7 +4,7 @@ Author: Frank Rohlfing <mail@frank-rohlfing.de>
 
 ## About Pletfix
 
-This is a application skeleton with Responsive Design for the Pletfix framwork.
+This is a application skeleton with Responsive Design for the Pletfix framework.
 
 Pletfix is going to be an easy to learn and fasted PHP framework.
 
@@ -22,7 +22,7 @@ Please have patience with us :-)
  
 1. Download files
 
-    Install Pletfix by entered the Composer create-project command in your terminal:
+    Install Pletfix by entering the Composer create-project command in your terminal:
     
     ~~~
     composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json my-project-name
@@ -34,7 +34,7 @@ Please have patience with us :-)
 
 2. Directory Permissions
 
-    After download Pletfix, you may create the folder `storage` with following subfolders:
+    After downloading Pletfix, you may create the folder `storage` with following subfolders:
     
     ~~~
     storage/
