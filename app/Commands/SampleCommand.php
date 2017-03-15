@@ -26,7 +26,7 @@ class SampleCommand extends AbstractCommand
      * @var array
      */
     protected $arguments = [
-        'name' => ['type' => 'string', 'description' => 'Name'],
+        'name' => ['type' => 'string', 'default' => 'Nobody', 'description' => 'Name'],
     ];
 
     /**
@@ -35,7 +35,7 @@ class SampleCommand extends AbstractCommand
      * @var array
      */
     protected $options = [
-        'bye' => ['type' => 'bool', 'short' => 'r', 'description' => 'Say Good By'],
+        'bye' => ['type' => 'bool', 'short' => 'b', 'description' => 'Say Good By'],
     ];
 
     /**

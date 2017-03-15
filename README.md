@@ -61,7 +61,7 @@ Please have patience with us :-)
 
     Customize the configuration files stored in `config` folder.
 
-5. Install Compser Packages
+5. Install Composer Packages
 
     Enter this command to install the packages in the `vendor` folder:
         
@@ -69,7 +69,7 @@ Please have patience with us :-)
         
     > For the production system you may using the `no-dev` option:        
     >    
-    >       composer insatll --no-dev
+    >       composer install --no-dev
     
 ## License
 
