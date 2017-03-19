@@ -1,7 +1,5 @@
 # The Pletfix Application Skeleton.
 
-Author: Frank Rohlfing <mail@frank-rohlfing.de>
-
 ## About Pletfix
 
 This is a application skeleton with Responsive Design for the Pletfix framework.
@@ -11,6 +9,8 @@ Pletfix is going to be an easy to learn and fasted PHP framework.
 But currently, Pletfix is **under construction** and not ready to use yet!
 
 Please have patience with us :-)
+
+Read more about Pletfix in the [official documentation](https://pletfix.com).
 
 ## Requirements
 

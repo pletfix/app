@@ -500,7 +500,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "34387da296dda392c4447016b52bf5b62eeb524f"
+                "reference": "f4fd66e5155b082405b0b8cbed9bcbc2d5eda61f"
             },
             "require": {
                 "aura/sqlquery": "^2.7",
@@ -512,7 +512,6 @@
                 "natxet/cssmin": "^3.0",
                 "oyejorge/less.php": "v1.7.0.10",
                 "php": ">=5.6.4",
-                "pletfix/core": "dev-master",
                 "tedivm/jshrink": "^1.1",
                 "vlucas/phpdotenv": "~2.2"
             },
@@ -524,10 +523,18 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "functions/helpers.php",
+                    "functions/http_status.php",
+                    "functions/services.php"
+                ],
                 "psr-4": {
                     "Core\\": "src/"
                 }
             },
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "Frank Rohlfing",
@@ -535,7 +542,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-03-13 20:05:50"
+            "time": "2017-03-19 14:38:39"
         },
         {
             "name": "psr/log",
