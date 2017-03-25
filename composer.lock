@@ -500,7 +500,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "f4fd66e5155b082405b0b8cbed9bcbc2d5eda61f"
+                "reference": "129b964df8e6d13436f75d5eebf12dfabb399678"
             },
             "require": {
                 "aura/sqlquery": "^2.7",
@@ -542,7 +542,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-03-19 14:38:39"
+            "time": "2017-03-25 01:40:15"
         },
         {
             "name": "psr/log",
