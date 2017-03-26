@@ -19,6 +19,7 @@ $di->set('response',                \Core\Services\Response::class, true);
 $di->set('route',                   \Core\Services\Route::class, true);
 $di->set('shutdown-handler',        \App\Handler\ShutdownHandler::class, true);
 $di->set('stdio',                   \Core\Services\Stdio::class, true);
+$di->set('translator',              \Core\Services\Translator::class, true);
 
 /*
  * Multiple Instance (not shared)
