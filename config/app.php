@@ -77,6 +77,17 @@ return [
 
     'timezone' => 'Europe/Berlin',
 
+    /**
+     * The first day of the week.
+     *
+     * According to international standard ISO 8601, Monday is the first day of the week.
+     * Several countries, including the United States and Canada, consider Sunday as the start of the week.
+     *
+     * 0 (for Sunday) through 6 (for Saturday)
+     */
+
+    'first_dow' => 1, // Monday
+
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -143,27 +154,5 @@ return [
         'app_file'   => 'app.log',
         'cli_file'   => 'cli.log',
         'permission' => 0664,
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Time and date formats
-    |--------------------------------------------------------------------------
-    |
-    | These settings define the date and time formats that are used all over the project.
-    |
-    */
-
-    'date_formats' => [
-        'de' => [
-            'date'     => 'd.m.Y',
-            'time'     => 'H:i',
-            'datetime' => 'd.m.Y H:i',
-        ],
-        'en' => [
-            'date'     => 'Y-m-d',
-            'time'     => 'H:i',
-            'datetime' => 'Y-m-d H:i',
-        ],
     ],
 ];
