@@ -42,6 +42,8 @@
             background: inherit;
             color: inherit;
             padding: 0;
+            font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+            font-size: 12px;
         }
         div#code {
             /*border: 1px solid grey;*/

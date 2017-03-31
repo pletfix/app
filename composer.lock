@@ -548,7 +548,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "2260c765cb90d4a1692d795b9a1f2838683e089d"
+                "reference": "b4f1ee1d8344519c8954fce81a658797a8fd8e3b"
             },
             "require": {
                 "aura/sqlquery": "^2.7",
@@ -591,7 +591,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-03-29 07:12:16"
+            "time": "2017-03-31 21:18:21"
         },
         {
             "name": "psr/log",

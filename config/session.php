@@ -14,14 +14,18 @@ return [
 
     /**
      * ----------------------------------------------------------------
-     * Session Lifetime
+     * Session Cookie Lifetime
      * ----------------------------------------------------------------
      *
-     * Lifetime of the session cookie, defined in minutes.
+     * The lifetime of the session cookie is defined in minutes.
+     *
      * The value 0 means "until the browser is closed."
+     *
+     * The upper limit, which is still useful, depends on the setting of
+     * session.gc_maxlifetime in php.ini.
      */
 
-    'lifetime' => 120,
+    'lifetime' => 120, // minutes
 
     /**
      * ----------------------------------------------------------------
