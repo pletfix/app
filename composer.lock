@@ -142,29 +142,34 @@
             "time": "2016-10-29 11:16:17"
         },
         {
-            "name": "fightbulc/moment",
-            "version": "1.26.2",
+            "name": "doctrine/inflector",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fightbulc/moment.php.git",
-                "reference": "68f3ddad3feca6d7aae5a333724401355661afbb"
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fightbulc/moment.php/zipball/68f3ddad3feca6d7aae5a333724401355661afbb",
-                "reference": "68f3ddad3feca6d7aae5a333724401355661afbb",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.2.*"
+                "phpunit/phpunit": "4.*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
             "autoload": {
-                "psr-4": {
-                    "Moment\\": "src/"
+                "psr-0": {
+                    "Doctrine\\Common\\Inflector\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -173,36 +178,35 @@
             ],
             "authors": [
                 {
-                    "name": "Ashish Tilara",
-                    "email": "ashish@itcutives.com",
-                    "role": "developer"
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
                 },
                 {
-                    "name": "Jaroslaw Kozak",
-                    "email": "jaroslaw.kozak68@gmail.com",
-                    "role": "developer"
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Tino Ehrich",
-                    "email": "tino@bigpun.me",
-                    "role": "developer"
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "Parse, validate, manipulate, and display dates in PHP w/ i18n support. Inspired by moment.js",
+            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
+            "homepage": "http://www.doctrine-project.org",
             "keywords": [
-                "date",
-                "display",
-                "format",
-                "i18n",
-                "locale",
-                "manipulate",
-                "moment",
-                "parse",
-                "time",
-                "translation",
-                "validate"
+                "inflection",
+                "pluralize",
+                "singularize",
+                "string"
             ],
-            "time": "2017-01-19 07:57:28"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -548,12 +552,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "b4f1ee1d8344519c8954fce81a658797a8fd8e3b"
+                "reference": "b90608a71e7c36439b9acadfe94ecd76a5aec943"
             },
             "require": {
                 "aura/sqlquery": "^2.7",
                 "doctrine/cache": "^1.6",
-                "fightbulc/moment": "^1.25",
+                "doctrine/inflector": "^1.1",
                 "jdorn/sql-formatter": "^1.2",
                 "leafo/scssphp": "^0.6.6",
                 "monolog/monolog": "~1.11",
@@ -591,7 +595,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-03-31 21:18:21"
+            "time": "2017-03-31 21:29:46"
         },
         {
             "name": "psr/log",
@@ -1009,6 +1013,69 @@
                 "scraper"
             ],
             "time": "2017-01-03 13:21:43"
+        },
+        {
+            "name": "fightbulc/moment",
+            "version": "1.26.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fightbulc/moment.php.git",
+                "reference": "68f3ddad3feca6d7aae5a333724401355661afbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fightbulc/moment.php/zipball/68f3ddad3feca6d7aae5a333724401355661afbb",
+                "reference": "68f3ddad3feca6d7aae5a333724401355661afbb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Moment\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashish Tilara",
+                    "email": "ashish@itcutives.com",
+                    "role": "developer"
+                },
+                {
+                    "name": "Jaroslaw Kozak",
+                    "email": "jaroslaw.kozak68@gmail.com",
+                    "role": "developer"
+                },
+                {
+                    "name": "Tino Ehrich",
+                    "email": "tino@bigpun.me",
+                    "role": "developer"
+                }
+            ],
+            "description": "Parse, validate, manipulate, and display dates in PHP w/ i18n support. Inspired by moment.js",
+            "keywords": [
+                "date",
+                "display",
+                "format",
+                "i18n",
+                "locale",
+                "manipulate",
+                "moment",
+                "parse",
+                "time",
+                "translation",
+                "validate"
+            ],
+            "time": "2017-01-19 07:57:28"
         },
         {
             "name": "guzzlehttp/guzzle",
