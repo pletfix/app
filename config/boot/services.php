@@ -14,8 +14,6 @@ $di->set('cookie',                  \Core\Services\Cookie::class, true);
 $di->set('database-factory',        \Core\Services\DatabaseFactory::class, true);
 $di->set('exception-handler',       \App\Handler\ExceptionHandler::class, true);
 $di->set('logger',                  \Core\Services\Logger::class, true);
-$di->set('mailer',                  \Core\Services\Mailer::class, true);
-$di->set('query-builder-factory',   \Core\Services\QueryBuilderFactory::class, true);
 $di->set('request',                 \Core\Services\Request::class, true);
 $di->set('response',                \Core\Services\Response::class, true);
 $di->set('route',                   \Core\Services\Route::class, true);
@@ -30,6 +28,7 @@ $di->set('translator',              \Core\Services\Translator::class, true);
 
 $di->set('collection',              \Core\Services\Collection::class, false);
 $di->set('date-time',               \Core\Services\DateTime::class, false);
+$di->set('mailer',                  \Core\Services\Mailer::class, false);
 $di->set('migrator',                \Core\Services\Migrator::class, false);
 $di->set('plugin-manager',          \Core\Services\PluginManager::class, false);
 $di->set('view',                    \Core\Services\View::class, false);

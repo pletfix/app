@@ -18,21 +18,21 @@ return [
 
     /**
      * ----------------------------------------------------------------
-     * Default Reply-To Address
+     * Default Reply-To Addresses
      * ----------------------------------------------------------------
      *
-     * Here you can specify the default reply-to address.
+     * Here you can specify the default reply-to addresses.
      *
      * If you omit this address, "from" will be used.
      *
      * The formatting of the address must comply with RFC 2822, e.g.:
      *      "user@example.com"
-     *      "user@example.com, anotheruser@example.com"
      *      "User <user@example.com>"
-     *      "User <user@example.com>, Another User <anotheruser@example.com>"
      */
 
-    'reply_to' => env('MAIL_REPLY_TO'),
+    'reply_to' => [
+        env('MAIL_REPLY_TO'),
+    ],
 
     /**
      * ----------------------------------------------------------------
