@@ -5,7 +5,7 @@
         .content {
             text-align: center;
             padding-top: 30px;
-        }
+            }
     </style>
 @endsection
 

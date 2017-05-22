@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="{{config('app.locale')}}">
 <head>
     <title>Error</title>
     <meta charset="utf-8"/>
-    <meta name="base-url" content="{{ request()->baseUrl() }}"/>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/error.css') }}"/>
+    <meta name="base-url" content="{{request()->baseUrl()}}"/>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/error.css')}}"/>
     <!--suppress CssUnusedSymbol -->
     <style>
         body {
@@ -78,7 +78,7 @@
             text-align: left;
         }
     </style>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
     <script>
         function scrollToErrorLine()
         {
@@ -95,29 +95,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">{{ $title }}</div>
-        <div class="subtitle">{{ $subtitle }}</div>
+        <div class="title">{{$title}}</div>
+        <div class="subtitle">{{$subtitle}}</div>
         @if(!empty($message))
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="bg-danger">{{ $message }}</h3>
+                    <h3 class="bg-danger">{{$message}}</h3>
                 </div>
             </div>
         @endif
         <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">File: {{ $file }} (line {{ $line }})</div>
+                    <div class="panel-heading">File: {{$file}} (line {{$line}})</div>
                     <div id="code" class="panel-body">
-                        {!! $source !!}
+                        {!!$source!!}
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Request ({{ request()->method() }}):  {{ request()->fullUrl() }}</div>
+                    <div class="panel-heading">Request ({{request()->method()}}):  {{request()->fullUrl()}}</div>
                     <div id="trace" class="panel-body">
-                        {!! $trace !!}
+                        {!!$trace!!}
                     </div>
                 </div>
             </div>
