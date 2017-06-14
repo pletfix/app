@@ -72,10 +72,14 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
     >    
     >     composer install --no-dev
     
-6. Migrate the database
+6. Create the database
 
-    By default, a SQLite database is ready to use. If you have configure an another database system, you may to 
-    migrate the database by entering the following command in your terminal: 
+    Create the database according to your configuration. If you didn't change the default setting, a SQLite database has 
+    been configured and you can create the database by entering this shell command:
+  
+        touch storage/db/sqlite.db
+
+    After then, enter the following command in your terminal to migrate the database:
 
         php console migrate
 
