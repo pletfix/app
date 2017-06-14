@@ -32,10 +32,7 @@
             "library/facades"
         ],
         "files": [
-            "library/functions/helpers.php",
-            "vendor/pletfix/core/functions/helpers.php",
-            "vendor/pletfix/core/functions/http_status.php",
-            "vendor/pletfix/core/functions/services.php"
+            "library/functions/helpers.php"
         ],
         "psr-4": {
             "App\\": "app/"

@@ -2,11 +2,11 @@
 
 return [
 
-    /**
+	/**
+	 * ----------------------------------------------------------------
+	 * Default Sender Address
      * ----------------------------------------------------------------
-     * Default Sender Address
-     * ----------------------------------------------------------------
-     *
+	 *
      * Here you can specify a default sender address.
      *
      * The formatting of the address must comply with RFC 2822, e.g.:
@@ -14,7 +14,7 @@ return [
      *      "User <user@example.com>"
      */
 
-    'from' => env('MAIL_FROM'),
+	'from' => env('MAIL_FROM'),
 
     /**
      * ----------------------------------------------------------------
@@ -35,15 +35,15 @@ return [
     ],
 
     /**
-     * ----------------------------------------------------------------
-     * Pretended Mail
-     * ----------------------------------------------------------------
-     *
-     * When this option is enabled, the mail will not be sent over the
-     * web and will instead be written to your application's logs files
-     * so you may inspect the message.
-     */
+	 * ----------------------------------------------------------------
+	 * Pretended Mail
+	 * ----------------------------------------------------------------
+	 *
+	 * When this option is enabled, the mail will not be sent over the
+	 * web and will instead be written to your application's logs files
+	 * so you may inspect the message.
+ 	 */
 
-    'pretend' => false,
+	'pretend' => false,
 
 ];

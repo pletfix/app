@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "85f6a5b5df3ca5f6f379681dc0f8307c",
+    "hash": "010de38f13e455794945aeb61575b2ac",
     "content-hash": "4baa9eb30c2f6e89a4e29306dd2e9192",
     "packages": [
         {
@@ -488,7 +488,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "f808f154308a9d2c8302f155884e4083592f85b3"
+                "reference": "719dbcd3f2bb415f216efbbe0ddfa2f2dd456912"
             },
             "require": {
                 "doctrine/cache": "^1.6",
@@ -531,7 +531,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-05-13 11:49:51"
+            "time": "2017-06-13 22:12:10"
         },
         {
             "name": "psr/http-message",

@@ -19,7 +19,7 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 - [NPM/Bower Dependency Manager for Composer](https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md) (a global scope installation is required!)
 
 ## Installing Pletfix Application
- 
+
 1. Download files
 
     Install Pletfix by entering the Composer create-project command in your terminal:
@@ -30,11 +30,12 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
     
     The command above will create a fresh Pletfix Application in the directory you specify (here "my-project-name").
     
-    At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?", something you should answer with Y(es).
+    At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?", something you 
+    should answer with Y(es).
 
 2. Directory Permissions
 
-    After downloading Pletfix, you may create the folder `storage` with following subfolders:
+    After you have downloaded Pletfix, you may create the folder `storage` with following subfolders:
     
     ~~~
     storage/
@@ -55,7 +56,7 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 
 3. Environment
 
-    Rename the file `.env.example` to `.env`and modify the entries as you need.
+    Rename the file `.env.example` to `.env`and modify the entries in this file as you need.
  
 4. Additional Configuration
 
@@ -67,10 +68,25 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
         
         composer install
         
-    > For the production system you may using the `no-dev` option:        
+    > For the production system you should using the `no-dev` option:        
     >    
-    >       composer install --no-dev
+    >     composer install --no-dev
     
+6. Migrate the database
+
+    By default, a SQLite database is ready to use. If you have configure an another database system, you may to 
+    migrate the database by entering the following command in your terminal: 
+
+        php console migrate
+
+That's all! Now the application is ready for the first request. 
+
+Open your browser and enter the URL of the application's public folder, e.g.
+    
+    ~~~
+    http://localhost/my-app/public/
+    ~~~
+
 ## License
 
 The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

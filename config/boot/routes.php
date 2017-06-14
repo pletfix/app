@@ -1,23 +1,14 @@
 <?php
 
+use Core\Services\Contracts\Route;
+
 $route = \Core\Application::route();
 
-$route->get('', 'HomeController@index');
+$route->middleware('Locale');
+
+$route->get('',              'HomeController@index');
+$route->get('locale/{lang}', 'HomeController@locale');
 
 $route->get('test', function() {
+    return 'Just a test!';
 });
-
-// Authentication Routes
-$route->get('auth/login',   'Auth\LoginController@form');
-$route->post('auth/login',  'Auth\LoginController@login');
-$route->post('auth/logout', 'Auth\LoginController@logout');
-
-//// Registration Routes
-//$route->get('auth/register',  'Auth\RegisterController@showRegistrationForm');
-//$route->post('auth/register', 'Auth\RegisterController@register');
-//
-//// Password Reset Routes
-//$route->get('auth/password/reset',         'Auth\ForgotPasswordController@showLinkRequestForm');
-//$route->post('auth/password/email',        'Auth\ForgotPasswordController@sendResetLinkEmail');
-//$route->get('auth/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-//$route->post('auth/password/reset',        'Auth\ResetPasswordController@reset');

@@ -5,7 +5,7 @@
         .content {
             text-align: center;
             padding-top: 30px;
-            }
+        }
     </style>
 @endsection
 
@@ -15,4 +15,7 @@
             <img src="{{url('images/pletfix_logo_gray.png')}}"/>
         </div>
     </div>
+
+    @include('_message')
+    @include('_errors')
 @endsection

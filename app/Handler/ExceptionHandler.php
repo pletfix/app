@@ -2,6 +2,7 @@
 
 namespace App\Handler;
 
+use Core\Exceptions\AuthenticationException;
 use Core\Exceptions\Contracts\HttpException;
 use Core\Exceptions\QueryException;
 use Core\Exceptions\StopException;
@@ -15,7 +16,7 @@ use Throwable;
  * Class ExceptionHandler
  *
  * This code based on Laravel's Exception Handlers.
- * FUnction renderPHP() was inspirited by selfphp.de ("Programmcode farbig hervorheben inkl. Zeilennummern").
+ * Function renderPHP() was inspirited by selfphp.de ("Programmcode farbig hervorheben inkl. Zeilennummern").
  *
  * @see https://github.com/laravel/laravel/blob/5.3/app/Exceptions/Handler.php
  * @see http://www.selfphp.de/kochbuch/kochbuch.php?code=39
@@ -143,8 +144,9 @@ class ExceptionHandler implements ExceptionHandlerContract
 //        if ($e instanceof HttpResponseException) {
 //            return $e->getResponse();
 //        }
-//        else if ($e instanceof AuthenticationException) {
-//            return $this->unauthenticated($request, $e);
+//        if ($e instanceof AuthenticationException) {
+//            header('Location: ' . url('auth/login'));
+//            exit;
 //        }
 //        else if ($e instanceof ValidationException) {
 //            return $this->convertValidationExceptionToResponse($e, $request);
@@ -312,7 +314,9 @@ class ExceptionHandler implements ExceptionHandlerContract
     private function renderSQL($sql, $line)
     {
         try {
-            $count = count(explode(PHP_EOL, $sql)) - 1;
+            $sql = trim($sql);
+//            $count = count(explode(PHP_EOL, $sql)) - 1;  // todo wieso minus 1?
+            $count = count(explode(PHP_EOL, $sql));
             $code  = '<code>' . SqlFormatter::highlight($sql) . '</code>';
             return $this->wrapLineNumbers($count, $code, $line);
         }

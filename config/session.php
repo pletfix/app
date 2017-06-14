@@ -33,10 +33,12 @@ return [
      * ----------------------------------------------------------------
      *
      * Path on the domain where the cookie will work.
+     *
      * Use a single slash ('/') for all paths on the domain.
+     * The base directory of the application is used if omit this setting.
      */
 
-    'path' => '/',
+    //'path' => null,
 
     /**
      * ----------------------------------------------------------------
@@ -50,7 +52,7 @@ return [
      * generated the cookie according to cookies specification.
      */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    //'domain' => null,
 
     /**
      * ----------------------------------------------------------------
@@ -60,7 +62,7 @@ return [
      * If TRUE cookie will only be sent over secure connections.
      */
 
-    'secure' => false,
+    //'secure' => false,
 
     /**
      * ----------------------------------------------------------------
@@ -71,6 +73,6 @@ return [
      * when setting the session cookie.
      */
 
-    'http_only' => true,
+    //'http_only' => true,
 
 ];
