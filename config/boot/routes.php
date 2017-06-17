@@ -4,7 +4,7 @@ use Core\Services\Contracts\Route;
 
 $route = \Core\Application::route();
 
-$route->middleware('Locale');
+$route->middleware(['Csrf', 'Locale']);
 
 $route->get('',              'HomeController@index');
 $route->get('locale/{lang}', 'HomeController@locale');

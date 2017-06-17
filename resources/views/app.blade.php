@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{config('app.locale')}}">
 <head>
-    <title>@yield('title', 'Pletfix Application')</title>
+    <title>@yield('title', config('app.name'))</title>
 
     <!-- Meta Tags -->
 
@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="@yield('description', 'Pletfix Homepage')" />
     <meta name="base-url" content="{{request()->baseUrl()}}"/>
+    <meta name="csrf-token" content="{{csrf_token()}}"/>
 
     @yield('metas')
 
@@ -51,7 +52,9 @@
             <div class="navbar-header">
 
                 <!-- Branding -->
-                <a class="navbar-brand" href="{{url()}}">Pletfix Application</a>
+                <a class="navbar-brand" href="{{url()}}">{{config('app.name')}}</a>
+
+                {{--left_menu_point--}}
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -80,8 +83,9 @@
                             <li><a href="{{url('locale/en')}}"><i class="{{locale()=='en' ? 'fa fa-check' :'fa'}}"></i> English</a></li>
                         </ul>
                     </li>
-                    {{--<li class="divider"></li>--}}
-                    <!--menuPoint-->
+
+                    {{--right_menu_point--}}
+
                 </ul>
             </div>
         </div>
