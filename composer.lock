@@ -488,7 +488,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pletfix/core.git",
-                "reference": "719dbcd3f2bb415f216efbbe0ddfa2f2dd456912"
+                "reference": "9ae978d7df970892a120501fdb070b3fda533e2e"
             },
             "require": {
                 "doctrine/cache": "^1.6",
@@ -531,7 +531,7 @@
                 }
             ],
             "description": "The Pletfix Core.",
-            "time": "2017-06-13 22:12:10"
+            "time": "2017-06-17 11:21:43"
         },
         {
             "name": "psr/http-message",
