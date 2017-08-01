@@ -2,7 +2,7 @@
 
 use Core\Services\Contracts\Route;
 
-$route = \Core\Application::route();
+$route = Core\Application::route();
 
 $route->middleware(['Csrf', 'Locale']);
 
