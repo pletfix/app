@@ -39,9 +39,8 @@ return [
 	 * Pretended Mail
 	 * ----------------------------------------------------------------
 	 *
-	 * When this option is enabled, the mail will not be sent over the
-	 * web and will instead be written to your application's logs files
-	 * so you may inspect the message.
+	 * When this option is enabled, the mail will not be sent over the web and will instead be written to your
+     * application's logs files so you may inspect the message.
  	 */
 
 	'pretend' => false,

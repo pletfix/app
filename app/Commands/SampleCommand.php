@@ -2,9 +2,9 @@
 
 namespace App\Commands;
 
-use Core\Services\AbstractCommand;
+use Core\Services\Command;
 
-class SampleCommand extends AbstractCommand
+class SampleCommand extends Command
 {
     /**
      * The console command name.
@@ -43,6 +43,7 @@ class SampleCommand extends AbstractCommand
      */
     public function handle()
     {
+        $this->choice('foo', ['y' => 'yes', 'n' => 'no']);
         if ($this->input('bye')) {
             $this->line('Good by, ' . $this->input('name') . '.');
         }

@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     /**
      * Base URL of the application.
      */
-    window.baseUrl = $('meta[name="base-url"]').attr('content').replace(/\/$/, '') + '/';
+    window.baseUrl = $('meta[name="base-url"]').attr('content').replace(/\/$/, '');
 
     /**
      * Set the language of the datepickers.
@@ -11,12 +11,10 @@ jQuery(document).ready(function($) {
     moment.locale($('html').attr('lang'));
 
     /**
-     * Solve the 'X-CSRF-TOKEN' problem by ajax calls ('TokenMismatchException:  in ... VerifyCsrfToken.php on line 46')
+     * Set the server site variable $_SERVER['HTTP_X_CSRF_TOKEN'].
      *
      * Need the following meta-tag in the main layout:
      *      <meta name="csrf-token" content="{{ csrf_token() }}" />
-     *
-     * @link http://laravel.io/forum/01-30-2015-laravel5-tokenmismatchexception-in-verifycsrftoken
      */
     $.ajaxSetup({
         headers: {

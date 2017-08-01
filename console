@@ -7,7 +7,7 @@
 define('APP_STARTTIME', microtime(true));
 
 /*
- * Set the base path for the application.
+ * Set the base path of the application.
  */
 define('BASE_PATH', __DIR__);
 

@@ -2,12 +2,12 @@
 
 namespace App\Handler;
 
-use Core\Exceptions\AuthenticationException;
 use Core\Exceptions\Contracts\HttpException;
 use Core\Exceptions\QueryException;
 use Core\Exceptions\StopException;
 use Core\Handler\Contracts\ExceptionHandler as ExceptionHandlerContract;
 use Core\Services\Contracts\Command;
+use Core\Services\Contracts\Response;
 use Exception;
 use SqlFormatter;
 use Throwable;
@@ -243,7 +243,7 @@ class ExceptionHandler implements ExceptionHandlerContract
         $data['message']  = $e->getMessage();
         $data['code']     = $e->getCode();
         $data['trace']    = $this->filterTrace($e->getTrace());
-        $data['status']   = HTTP_STATUS_INTERNAL_SERVER_ERROR;
+        $data['status']   = Response::HTTP_INTERNAL_SERVER_ERROR;
 
         // determine the relevant file
         $firstTraceEntry = !empty($data['trace']) ? reset($data['trace']) : null;
@@ -257,7 +257,7 @@ class ExceptionHandler implements ExceptionHandlerContract
         }
 
         if ($e instanceof HttpException) {
-            $data['status'] = $e->getStatusCode() ?: HTTP_STATUS_INTERNAL_SERVER_ERROR;
+            $data['status'] = $e->getStatusCode() ?: Response::HTTP_INTERNAL_SERVER_ERROR;
         }
         else if ($e instanceof QueryException) {
             $data['ansiCode']   = isset($e->errorInfo[0]) ? $e->errorInfo[0] : null;
@@ -363,7 +363,7 @@ class ExceptionHandler implements ExceptionHandlerContract
      */
     private function filterTrace($trace)
     {
-        $ignore = 'app/Services/AbstractDatabase.php';
+        $ignore = 'app/Services/Database.php';
         $j = strlen($ignore);
         foreach ($trace as $i => $entry) {
             if (isset($entry['file'])) {
