@@ -23,8 +23,8 @@ class CreateUsersTable implements Migration
 //            'updated_at'       => ['type' => 'timestamp'],
         ]);
 
-        $db->schema()->addIndex('users', null, ['columns' => ['email'],     'unique'  => true]);
-        $db->schema()->addIndex('users', null, ['columns' => ['principal'], 'unique'  => true]);
+        $db->schema()->addIndex('users', 'email',     ['unique'  => true]);
+        $db->schema()->addIndex('users', 'principal', ['unique'  => true]);
     }
 
     /**
