@@ -24,7 +24,7 @@ class User extends Model
      *
      * @var array
      */
-    protected static $guarded = ['id', 'role', 'confirmation_token', 'remember_token', 'created_at', 'updated_at']; // todo $fillable ermöglichen
+    protected static $guarded = ['id', 'role', 'confirmation_token', 'remember_token', 'created_at', 'updated_at'];
 
 //    public function beforeInsert()
 //    {

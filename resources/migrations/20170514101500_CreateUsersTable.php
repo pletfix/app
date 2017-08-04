@@ -19,7 +19,7 @@ class CreateUsersTable implements Migration
             'principal'          => ['type' => 'string', 'nullable' => true],
             'confirmation_token' => ['type' => 'string', 'size' =>  60, 'nullable' => true],
             'remember_token'     => ['type' => 'string', 'size' => 100, 'nullable' => true],
-//            'created_at'       => ['type' => 'timestamp'], // todo!
+//            'created_at'       => ['type' => 'timestamp'],
 //            'updated_at'       => ['type' => 'timestamp'],
         ]);
 

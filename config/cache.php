@@ -12,7 +12,7 @@ return [
      * not explicitly specified when executing a given caching function.
      */
 
-    'default' => env('CACHE_DRIVER', 'file'),
+    'default' => env('CACHE_STORE', 'file'),
 
     /**
      * ----------------------------------------------------------------
@@ -24,37 +24,37 @@ return [
      * same cache driver to group types of items stored in your caches.
      *
      * Supported Driver:
-     * - "apc"          (requires ext/apc)
-     * - "array"        (in memory, lifetime of the request)
-     * - "file"         (not optimal for high concurrency)
-     * - "memcached"    (requires ext/memcached)
-     * - "redis"        (requires ext/phpredis)
+     * - APCu         (requires ext/apc)
+     * - Array        (in memory, lifetime of the request)
+     * - File         (not optimal for high concurrency)
+     * - Memcached    (requires ext/memcached)
+     * - Redis        (requires ext/phpredis)
      */
 
     'stores' => [
 
         'apc' => [
-            'driver' => 'apc',
+            'driver' => 'APCu',
         ],
 
         'array' => [
-            'driver' => 'array',
+            'driver' => 'Array',
         ],
 
         'file' => [
-            'driver' => 'file',
+            'driver' => 'File',
             'path'   => storage_path('cache/doctrine'),
         ],
 
         'memcached' => [
-            'driver' => 'memcached',
+            'driver' => 'Memcached',
             'host'   => env('MEMCACHED_HOST', '127.0.0.1'),
             'port'   => env('MEMCACHED_PORT', 11211),
             'weight' => 100,
         ],
 
         'redis' => [
-            'driver'  => 'redis',
+            'driver'  => 'Redis',
             'host'    => env('REDIS_HOST', '127.0.0.1'),
             'port'    => env('REDIS_PORT', 6379),
             'timeout' => 0.0,

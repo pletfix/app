@@ -32,7 +32,7 @@ $di->set('translator',              \Core\Services\Translator::class, true);
 $di->set('collection',              \Core\Services\Collection::class, false);
 $di->set('date-time',               \Core\Services\DateTime::class, false);
 $di->set('mailer',                  \Core\Services\Mailer::class, false);
-$di->set('migrator',                \Core\Services\Migrator::class, false); // todo shared?
-$di->set('plugin-manager',          \Core\Services\PluginManager::class, false); // todo shared?
+$di->set('migrator',                \Core\Services\Migrator::class, false);
+$di->set('plugin-manager',          \Core\Services\PluginManager::class, false);
 $di->set('view',                    \Core\Services\View::class, false);
 $di->set('view-compiler',           \Core\Services\ViewCompiler::class, false);

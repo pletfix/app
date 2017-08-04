@@ -1,6 +1,5 @@
 <div class="search">
     <form method="GET" action="{{request()->url()}}" accept-charset="UTF-8" class="form-inline">
-        {{--todo!--}}
         {{--@foreach(Request::except(['search', 'page']) as $key => $value)--}}
             {{--{!! Form::hidden($key, $value) !!}--}}
         {{--@endforeach--}}

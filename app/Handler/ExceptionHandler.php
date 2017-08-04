@@ -315,7 +315,6 @@ class ExceptionHandler implements ExceptionHandlerContract
     {
         try {
             $sql = trim($sql);
-//            $count = count(explode(PHP_EOL, $sql)) - 1;  // todo wieso minus 1?
             $count = count(explode(PHP_EOL, $sql));
             $code  = '<code>' . SqlFormatter::highlight($sql) . '</code>';
             return $this->wrapLineNumbers($count, $code, $line);
@@ -437,64 +436,4 @@ class ExceptionHandler implements ExceptionHandlerContract
 
         return implode(', ', $args);
     }
-
-//    /**
-//     * Convert an authentication exception into an unauthenticated response.
-//     *
-//     * // TODO
-//     *
-//     * @param  \Illuminate\Http\Request  $request
-//     * @param  \Illuminate\Auth\AuthenticationException  $exception
-//     * @return \Illuminate\Http\Response
-//     */
-//    private function unauthenticated($request, /** @noinspection PhpUnusedParameterInspection */ AuthenticationException $exception)
-//    {
-//        if ($request->expectsJson()) {
-//            return response()->json(['error' => 'Unauthenticated.'], 401);
-//        }
-//
-//        return redirect()->guest('auth/login');
-//    }
-
-//    /**
-//     * Find the first relevant trace entry
-//     *
-//     * @param Exception $e
-//     * @return null|array
-//     */
-//    private function findRelevantTraceEntry(Exception $e)
-//    {
-//        // todo
-//        $laravelPath = base_path('vendor' . DIRECTORY_SEPARATOR . 'laravel');
-//        $symfonyPath = base_path('vendor' . DIRECTORY_SEPARATOR . 'symfony');
-//
-//        $trace = $e->getTrace();
-//        foreach ($trace as $entry) {
-//            if (isset($entry['file'])
-//                && substr($entry['file'], 0, strlen($laravelPath)) != $laravelPath
-//                && substr($entry['file'], 0, strlen($symfonyPath)) != $symfonyPath) {
-//                return $entry;
-//            }
-//        }
-//
-//        return null;
-//    }
-
-//    private $levels = [
-//        E_DEPRECATED => 'Deprecated',
-//        E_USER_DEPRECATED => 'User Deprecated',
-//        E_NOTICE => 'Notice',
-//        E_USER_NOTICE => 'User Notice',
-//        E_STRICT => 'Runtime Notice',
-//        E_WARNING => 'Warning',
-//        E_USER_WARNING => 'User Warning',
-//        E_COMPILE_WARNING => 'Compile Warning',
-//        E_CORE_WARNING => 'Core Warning',
-//        E_USER_ERROR => 'User Error',
-//        E_RECOVERABLE_ERROR => 'Catchable Fatal Error',
-//        E_COMPILE_ERROR => 'Compile Error',
-//        E_PARSE => 'Parse Error',
-//        E_ERROR => 'Error',
-//        E_CORE_ERROR => 'Core Error',
-//    ];
 }

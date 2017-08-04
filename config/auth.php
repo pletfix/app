@@ -10,7 +10,7 @@ return [
      * Here you may specify the available user roles.
      */
 
-    'roles' => [  // todo Bezeichnung gehört hier nicht hin, für Mehrsprachlichkeit nicht geeignet, gehört nach resources/lang
+    'roles' => [
 //      'guest'  => 'Gast',
         'user'   => 'Benutzer',
         'editor' => 'Redakteur',
