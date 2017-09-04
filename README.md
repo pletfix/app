@@ -62,17 +62,7 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 
     Customize the configuration files stored in `config` folder.
 
-5. Install Composer Packages
-
-    Enter this command to install the packages in the `vendor` folder:
-        
-        composer install
-        
-    > For the production system you should using the `no-dev` option:        
-    >    
-    >     composer install --no-dev
-    
-6. Create the database
+5. Create the database
 
     Create the database according to your configuration. If you didn't change the default setting, a SQLite database has 
     been configured and you can create the database by entering this shell command:
@@ -87,10 +77,8 @@ That's all! Now the application is ready for the first request.
 
 Open your browser and enter the URL of the application's public folder, e.g.
     
-    ~~~
     http://localhost/my-app/public/
-    ~~~
-
+        
 ## License
 
 The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

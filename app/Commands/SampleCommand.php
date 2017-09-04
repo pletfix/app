@@ -43,7 +43,6 @@ class SampleCommand extends Command
      */
     public function handle()
     {
-        $this->choice('foo', ['y' => 'yes', 'n' => 'no']);
         if ($this->input('bye')) {
             $this->line('Good by, ' . $this->input('name') . '.');
         }
