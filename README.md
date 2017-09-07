@@ -33,9 +33,13 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
     At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?", something you 
     should answer with Y(es).
 
-2. Directory Permissions
+2. Environment
 
-    After you have downloaded Pletfix, you may create the folder `storage` with following subfolders:
+    After you have downloaded Pletfix, copy the file `.env.example` to `.env`and modify the entries in this file as you need.
+
+3. Directory Permissions
+
+    Create the folder `storage` with following subfolders:
     
     ~~~
     storage/
@@ -53,10 +57,6 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
     chmod 775 *
     chmod g+s *
     ~~~
-
-3. Environment
-
-    Rename the file `.env.example` to `.env`and modify the entries in this file as you need.
  
 4. Additional Configuration
 

@@ -35,17 +35,9 @@ class ComposerHandler
      */
     public static function postRootPackageInstall(/** @noinspection PhpUndefinedClassInspection */ Event $event)
     {
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io = $event->getIO();
-
-        if (!file_exists('.env')) {
-            /** @noinspection PhpUndefinedMethodInspection */
-            $io->write('Create environment file...');
-            if (copy('.env.example', '.env')) {
-                /** @noinspection PhpUndefinedMethodInspection */
-                $io->write('Environment file successfully created.');
-            }
-        }
+        self::createEnvironmentFile($event);
+        self::createStorageFolder($event);
+        self::createDatabase($event);
     }
 
     /** @noinspection PhpUndefinedClassInspection */
@@ -58,19 +50,53 @@ class ComposerHandler
      */
     public static function postCreateProjectCmd(/** @noinspection PhpUndefinedClassInspection */ Event $event)
     {
-        self::autoload($event);
+        self::migrateDatabase($event);
+    }
+
+    /** @noinspection PhpUndefinedClassInspection */
+    /**
+     * Create the database
+     *
+     * @param Event $event
+     */
+    private static function createEnvironmentFile(/** @noinspection PhpUndefinedClassInspection */ Event $event)
+    {
+        if (file_exists('.env')) {
+            return;
+        }
 
         /** @noinspection PhpUndefinedMethodInspection */
         $io = $event->getIO();
 
         /** @noinspection PhpUndefinedMethodInspection */
+        $io->write('Create environment file...');
+
+        if (copy('.env.example', '.env')) {
+            /** @noinspection PhpUndefinedMethodInspection */
+            $io->write('Environment file successfully created.');
+        }
+    }
+
+    /** @noinspection PhpUndefinedClassInspection */
+    /**
+     * Create the storage folder
+     *
+     * @param Event $event
+     */
+    private static function createStorageFolder(/** @noinspection PhpUndefinedClassInspection */ Event $event)
+    {
+        /** @noinspection PhpUndefinedMethodInspection */
+        $io = $event->getIO();
+
+        /** @noinspection PhpUndefinedMethodInspection */
         $io->write('Create storage folder...');
+
         if (!file_exists('storage')) {
             mkdir('storage');
         }
 
         /** @noinspection PhpUndefinedMethodInspection */
-        $mode = $io->askAndValidate('File mode for files created in the storage folder? Enter "-" to skip. [2775]', function($mode) {
+        $mode = $io->askAndValidate('File mode for files created in the storage folder? Enter "-" to skip. [2775]', function ($mode) {
             if ($mode == '-') {
                 return $mode;
             }
@@ -95,31 +121,65 @@ class ComposerHandler
                 @chgrp($path, $group);
             }
         }
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io->write('Storage folder successfully created.');
 
         /** @noinspection PhpUndefinedMethodInspection */
-        if ($io->askConfirmation('Create a SQLite database (y/n)? [y]')) {
-            if (!file_exists('storage/db/sqlite.db')) {
-                touch('storage/db/sqlite.db');
-            }
-            /** @noinspection PhpUndefinedMethodInspection */
-            $io->write('Migrate the database...');
-            system('php console migrate');
-        }
+        $io->write('Storage folder successfully created.');
     }
 
     /** @noinspection PhpUndefinedClassInspection */
     /**
-     * Handle the post-create-project-cmd Composer event.
-     *
-     * Occurs after the root package has been installed, during the create-project command.
+     * Create the database
      *
      * @param Event $event
      */
-    private static function autoload(/** @noinspection PhpUndefinedClassInspection */ Event $event)
+    private static function createDatabase(/** @noinspection PhpUndefinedClassInspection */ Event $event)
     {
-        /** @noinspection PhpUndefinedMethodInspection, PhpIncludeInspection */
-        require_once $event->getComposer()->getConfig()->get('vendor-dir') . '/autoload.php';
+        if (file_exists('storage/db/sqlite.db')) {
+            return;
+        }
+
+        /** @noinspection PhpUndefinedMethodInspection */
+        $io = $event->getIO();
+
+        /** @noinspection PhpUndefinedMethodInspection */
+        if ($io->askConfirmation('Create a SQLite database (y/n)? [y]')) {
+            touch('storage/db/sqlite.db');
+        }
     }
+
+
+    /** @noinspection PhpUndefinedClassInspection */
+    /**
+     * Create the database
+     *
+     * @param Event $event
+     */
+    private static function migrateDatabase(/** @noinspection PhpUndefinedClassInspection */ Event $event)
+    {
+        if (!file_exists('storage/db/sqlite.db')) {
+            return;
+        }
+
+        /** @noinspection PhpUndefinedMethodInspection */
+        $io = $event->getIO();
+
+        /** @noinspection PhpUndefinedMethodInspection */
+        $io->write('Migrate the database...');
+
+        system('php console migrate');
+    }
+
+//    /** @noinspection PhpUndefinedClassInspection */
+//    /**
+//     * Handle the post-create-project-cmd Composer event.
+//     *
+//     * Occurs after the root package has been installed, during the create-project command.
+//     *
+//     * @param Event $event
+//     */
+//    private static function autoload(/** @noinspection PhpUndefinedClassInspection */ Event $event)
+//    {
+//        /** @noinspection PhpUndefinedMethodInspection, PhpIncludeInspection */
+//        require_once $event->getComposer()->getConfig()->get('vendor-dir') . '/autoload.php';
+//    }
 }
