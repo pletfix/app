@@ -18,7 +18,7 @@
         "behat/mink": "^1.7",
         "behat/mink-browserkit-driver": "dev-master",
         "behat/mink-goutte-driver": "^1.2",
-        "phpunit/phpunit": "^5.7|^6.0",
+        "phpunit/phpunit": "^5.7",
         "npm-asset/bootstrap": "^3.3.7",
         "npm-asset/eonasdan-bootstrap-datetimepicker": "^4.17.37",
         "npm-asset/font-awesome": "^4.6.3",
@@ -37,5 +37,13 @@
         "psr-4": {
             "App\\": "app/"
         }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "App\\Handler\\ComposerHandler::postRootPackageInstall"
+        ],
+        "post-create-project-cmd": [
+            "App\\Handler\\ComposerHandler::postCreateProjectCmd"
+        ]
     }
 }
