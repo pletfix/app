@@ -171,7 +171,7 @@ class ComposerHandler
     protected function askConfirmation($question, $default = true)
     {
         $prompt = $this->format($question . ' (yes/no)', [self::STYLE_GREEN])
-            . ' [' . $this->format($default, [self::STYLE_YELLOW]) . ']'
+            . ' [' . $this->format($default ? 'yes' : 'no', [self::STYLE_YELLOW]) . ']'
             . ':' . PHP_EOL . '> ';
 
         /** @noinspection PhpUndefinedMethodInspection */
@@ -257,9 +257,9 @@ class ComposerHandler
     {
         $this->write('Create storage folder...');
 
-        $this->writeHint('Enter the file mode and group for the directories that are created in the storage folder.');
+        $this->writeHint('Enter the file mode and group for the directories created in the storage folder.');
         $this->writeHint('Note, that the directories within the storage folder must be writable by your web server!');
-        $this->writeHint('Enter "-" to skip this part. In this case you have to set the permission after the installation procedure manually.');
+        $this->writeHint('Enter "-" to skip this part. In this case you have to set the permissions after the installation procedure manually.');
 
         if (!file_exists('storage')) {
             mkdir('storage');
