@@ -30,6 +30,8 @@ The command above create a fresh Pletfix Application in the directory you specif
 
 The command above creates a directory you specify (here "my-project-name") and downloads the package in this folder.
 
+![Screenshot - Installation started](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_started.png)     
+
 **Storage Folder**
 
 After then, the installation procedure asks you about a file mode and group that should be used for the directories 
@@ -49,8 +51,6 @@ this:
 
 In addition, you are asked if a SQLite database should be created.
 If you answer yes, the migration procedure will be executed at the end of the installation.
-
-![Screenshot - Installation started](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_started.png)     
 
 **Remove VCS**
 
