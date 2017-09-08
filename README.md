@@ -6,7 +6,7 @@ This is a application skeleton with Responsive Design for the Pletfix framework.
 
 Pletfix is going to be an easy to learn and fasted PHP framework.
 
-![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_app.png)           
+![Error Message](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_app.png)
 
 But currently, Pletfix is **under construction** and not ready to use yet!
 
@@ -50,14 +50,14 @@ this:
 In addition, you are asked if a SQLite database should be created.
 If you answer yes, the migration procedure will be executed at the end of the installation.
 
-![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_screenshot_started.png)     
+![Screenshot - Installation started](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_screenshot_started.png)     
 
 **Remove VCS**
 
 At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?". You should answer 
 with Y(es) (the default).
 
-![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_screenshot_completed.png)     
+![Screenshot - Installation completed](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_screenshot_completed.png)     
 
 That's all! Now the application is ready for the first request. 
 
@@ -82,7 +82,7 @@ Customize the configuration files stored in `config` folder.
 
 ### Your requirements could not be resolved to an installable set of packages.
        
-![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_error.png)        
+![Screenshot - Error Message](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_error.png)        
 
 If you receive this error message during installation, [NPM/Bower Dependency Manager for Composer](https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md) 
 may not be installed. Note, that a **global scope installation** of this Dependency Manager is required!
