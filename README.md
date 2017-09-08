@@ -6,6 +6,8 @@ This is a application skeleton with Responsive Design for the Pletfix framework.
 
 Pletfix is going to be an easy to learn and fasted PHP framework.
 
+![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_app.png)           
+
 But currently, Pletfix is **under construction** and not ready to use yet!
 
 Please have patience with us :-)
@@ -20,65 +22,71 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 
 ## Installing Pletfix Application
 
-1. Download files
+Install Pletfix by entering the Composer's create-project command in your terminal:
 
-    Install Pletfix by entering the Composer create-project command in your terminal:
-    
-    ~~~
     composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json my-project-name
-    ~~~
-    
-    The command above will create a fresh Pletfix Application in the directory you specify (here "my-project-name").
-    
-    At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?", something you 
-    should answer with Y(es).
 
-2. Environment
+The command above create a fresh Pletfix Application in the directory you specify (here "my-project-name").
 
-    After you have downloaded Pletfix, copy the file `.env.example` to `.env`and modify the entries in this file as you need.
+The command above creates a directory you specify (here "my-project-name") and downloads the package in this folder.
 
-3. Directory Permissions
+**Storage Folder**
 
-    Create the folder `storage` with following subfolders:
+After then, the installation procedure asks you about a file mode and group that should be used for the directories 
+to be created in the storage folder.
+
+Note, that the directories within the storage folder must be writable by your web server!
+
+Enter "-" to skip this part. In this case you have to set the permissions after the installation procedure manually like 
+this:
     
-    ~~~
-    storage/
-        cache/
-        logs/
-    ~~~
-    
-    **Important:** All directories within the storage have to be writable by your web server! 
-    
-    You may change the permissions as below:
-    
-    ~~~
     cd storage
     chgrp www-data *
     chmod 775 *
     chmod g+s *
-    ~~~
- 
-4. Additional Configuration
 
-    Customize the configuration files stored in `config` folder.
+**Database**
 
-5. Create the database
+In addition, you are asked if a SQLite database should be created.
+If you answer yes, the migration procedure will be executed at the end of the installation.
 
-    Create the database according to your configuration. If you didn't change the default setting, a SQLite database has 
-    been configured and you can create the database by entering this shell command:
-  
-        touch storage/db/sqlite.db
+![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_screenshot_started.png)     
 
-    After then, enter the following command in your terminal to migrate the database:
+**Remove VCS**
 
-        php console migrate
+At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?". You should answer 
+with Y(es) (the default).
+
+![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_screenshot_completed.png)     
 
 That's all! Now the application is ready for the first request. 
 
 Open your browser and enter the URL of the application's public folder, e.g.
     
     http://localhost/my-app/public/
-        
+    
+## Customizing
+
+### Environment
+
+After you have installed Pletfix, modify the entries in the environment file `.env` as you need. 
+
+Because this file typically contains sensitive data, e.g. Passwords, it must not be pushed into your repository! 
+Therefore, be sure, that this file is registered in `.gitignore`.
+ 
+### Additional Configuration
+
+Customize the configuration files stored in `config` folder.
+    
+## Trouble Shooting
+
+### Your requirements could not be resolved to an installable set of packages.
+       
+![Error Message](https://raw.githubusercontent.com/pletfix/app/master/docs/screenshot_error.png)        
+
+If you receive this error message during installation, [NPM/Bower Dependency Manager for Composer](https://github.com/fxpio/composer-asset-plugin/blob/master/Resources/doc/index.md) 
+may not be installed. Note, that a **global scope installation** of this Dependency Manager is required!
+
 ## License
 
 The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
