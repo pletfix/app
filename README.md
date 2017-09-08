@@ -50,14 +50,14 @@ this:
 In addition, you are asked if a SQLite database should be created.
 If you answer yes, the migration procedure will be executed at the end of the installation.
 
-![Screenshot - Installation started](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_screenshot_started.png)     
+![Screenshot - Installation started](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_started.png)     
 
 **Remove VCS**
 
 At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?". You should answer 
 with Y(es) (the default).
 
-![Screenshot - Installation completed](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_screenshot_completed.png)     
+![Screenshot - Installation completed](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_completed.png)     
 
 That's all! Now the application is ready for the first request. 
 
@@ -80,7 +80,7 @@ Customize the configuration files stored in `config` folder.
     
 ## Trouble Shooting
 
-### Your requirements could not be resolved to an installable set of packages.
+Error: Your requirements could not be resolved to an installable set of packages.
        
 ![Screenshot - Error Message](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_error.png)        
 
