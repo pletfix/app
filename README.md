@@ -2,7 +2,7 @@
 
 ## About Pletfix
 
-This is a application skeleton with Responsive Design for the Pletfix framework.
+This is a application skeleton for the Pletfix framework.
 
 Pletfix is going to be an easy to learn and fasted PHP framework.
 
@@ -25,8 +25,6 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 Install Pletfix by entering the Composer's create-project command in your terminal:
 
     composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json my-project-name
-
-The command above create a fresh Pletfix Application in the directory you specify (here "my-project-name").
 
 The command above creates a directory you specify (here "my-project-name") and downloads the package in this folder.
 
@@ -54,8 +52,10 @@ If you answer yes, the migration procedure will be executed at the end of the in
 
 **Remove VCS**
 
+Composer loads all dependent packages into the vendor folder. It could take a few minutes.
+
 At the end it will ask you "Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]?". You should answer 
-with Y(es) (the default).
+with **Y** (the default).
 
 ![Screenshot - Installation completed](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_completed.png)     
 
@@ -80,7 +80,7 @@ Customize the configuration files stored in `config` folder.
     
 ## Trouble Shooting
 
-Error: Your requirements could not be resolved to an installable set of packages.
+"Your requirements could not be resolved to an installable set of packages."
        
 ![Screenshot - Error Message](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_error.png)        
 
