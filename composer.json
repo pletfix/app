@@ -40,10 +40,10 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "Core\\Handler\\ComposerHandler::postRootPackageInstall"
+            "App\\Handler\\ComposerHandler::postRootPackageInstall"
         ],
         "post-create-project-cmd": [
-            "Core\\Handler\\ComposerHandler::postCreateProjectCmd"
+            "App\\Handler\\ComposerHandler::postCreateProjectCmd"
         ]
     }
 }
