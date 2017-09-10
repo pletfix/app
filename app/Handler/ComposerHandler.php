@@ -189,9 +189,7 @@ class ComposerHandler
         foreach (['', 'boot/' ] as $subdir) {
             foreach (scandir('vendor/pletfix/core/config/' . $subdir) as $file) {
                 $file = $subdir . $file;
-                echo $file . PHP_EOL;
                 if ($file[0] == '.' || @is_dir('vendor/pletfix/core/config/' . $file)) {
-                    echo 'skip ' . $file . PHP_EOL;
                     continue;
                 }
                 if (!file_exists('config/' . $file)) {
