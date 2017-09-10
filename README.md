@@ -1,16 +1,29 @@
 # The Pletfix Application Skeleton.
 
+<p align="center">
+  <a href="https://pletfix.com" target="_blank" >
+    <img alt="Pletfix" src="https://pletfix.com/images/logo_200x200.png"/>
+  </a>
+</p>
+
+<p align="center">
+<a href="https://travis-ci.org/pletfix/app"><img src="https://travis-ci.org/pletfix/app.svg?branch=master" alt="Build Status"></a>
+<a href="https://packagist.org/packages/pletfix/app"><img src="https://poser.pugx.org/pletfix/app/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/pletfix/app"><img src="https://poser.pugx.org/pletfix/app/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/pletfix/app"><img src="https://poser.pugx.org/pletfix/app/license.svg" alt="License"></a>
+</p>
+
 ## About Pletfix
 
 This is a application skeleton for the Pletfix framework.
 
 Pletfix is going to be an easy to learn and fasted PHP framework.
 
-![Error Message](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_app.png)
-
 But currently, Pletfix is **under construction** and not ready to use yet!
 
 Please have patience with us :-)
+
+Some parts of the project were influenced by: Laravel, Symfony, CakePHP, Aura for PHP, Doctrine, Slim and Flight. Thank you!
 
 Read more about Pletfix in the [official documentation](https://pletfix.com).
 
@@ -64,6 +77,8 @@ That's all! Now the application is ready for the first request.
 Open your browser and enter the URL of the application's public folder, e.g.
     
     http://localhost/my-app/public/
+    
+![Screenshot - Application](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_app.png)
     
 ## Customizing
 
