@@ -182,21 +182,21 @@ class ComposerHandler
             mkdir('config');
         }
 
-        foreach (scandir('vendor/pletfix/core/config') as $file) {
-            if ($file[0] == '.' || @is_dir($file)) {
-                continue;
-            }
-            if (!file_exists('config/' . $file)) {
-                copy('vendor/pletfix/core/config/' . $file, 'config/' . $file);
-            }
+        if (!file_exists('config/boot')) {
+            mkdir('config/boot');
         }
 
-        foreach (scandir('vendor/pletfix/core/config/boot') as $file) {
-            if ($file[0] == '.' || @is_dir($file)) {
-                continue;
-            }
-            if (!file_exists('config/boot/' . $file)) {
-                copy('vendor/pletfix/core/config/boot' . $file, 'config/boot/' . $file);
+        foreach (['', 'boot/' ] as $subdir) {
+            foreach (scandir('vendor/pletfix/core/config/' . $subdir) as $file) {
+                $file = $subdir . $file;
+                echo $file . PHP_EOL;
+                if ($file[0] == '.' || @is_dir('vendor/pletfix/core/config/' . $file)) {
+                    echo 'skip ' . $file . PHP_EOL;
+                    continue;
+                }
+                if (!file_exists('config/' . $file)) {
+                    copy('vendor/pletfix/core/config/' . $file, 'config/' . $file);
+                }
             }
         }
 
