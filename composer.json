@@ -1,6 +1,7 @@
 {
     "name": "pletfix/app",
     "description": "The Pletfix Application Skeleton.",
+    "keywords": ["pletfix", "framework", "kiss", "fullstack", "skeleton"],
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
