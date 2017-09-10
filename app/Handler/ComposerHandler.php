@@ -36,7 +36,6 @@ class ComposerHandler
     public static function postRootPackageInstall(/** @noinspection PhpUndefinedClassInspection */ Event $event)
     {
         self::createEnvironmentFile($event);
-        self::copyConfig($event);
         self::createStorageFolder($event);
         self::createDatabase($event);
     }
@@ -54,6 +53,7 @@ class ComposerHandler
         /** @noinspection PhpUndefinedMethodInspection, PhpIncludeInspection */
         //require_once $event->getComposer()->getConfig()->get('vendor-dir') . '/autoload.php';
 
+        self::copyConfig($event);
         self::migrateDatabase($event);
 
         /** @noinspection PhpUndefinedMethodInspection */
@@ -84,43 +84,6 @@ class ComposerHandler
 
         /** @noinspection PhpUndefinedMethodInspection */
         $io->write('Environment file created.');
-    }
-
-    /** @noinspection PhpUndefinedClassInspection */
-    /**
-     * Copy the config files from the core.
-     *
-     * @param Event $event
-     */
-    private static function copyConfig(/** @noinspection PhpUndefinedClassInspection */ Event $event)
-    {
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io = $event->getIO();
-
-        if (!file_exists('config')) {
-            mkdir('config');
-        }
-
-        foreach (scandir('vendor/pletfix/core/config') as $file) {
-            if ($file[0] == '.' || @is_dir($file)) {
-                continue;
-            }
-            if (!file_exists('config/' . $file)) {
-                copy('vendor/pletfix/core/config/' . $file, 'config/' . $file);
-            }
-        }
-
-        foreach (scandir('vendor/pletfix/core/config/boot') as $file) {
-            if ($file[0] == '.' || @is_dir($file)) {
-                continue;
-            }
-            if (!file_exists('config/boot/' . $file)) {
-                copy('vendor/pletfix/core/config/boot' . $file, 'config/boot/' . $file);
-            }
-        }
-
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io->write('Configuration files created.');
     }
 
     /** @noinspection PhpUndefinedClassInspection */
@@ -202,6 +165,43 @@ class ComposerHandler
             /** @noinspection PhpUndefinedMethodInspection */
             $io->write('Database created.');
         }
+    }
+
+    /** @noinspection PhpUndefinedClassInspection */
+    /**
+     * Copy the config files from the core.
+     *
+     * @param Event $event
+     */
+    private static function copyConfig(/** @noinspection PhpUndefinedClassInspection */ Event $event)
+    {
+        /** @noinspection PhpUndefinedMethodInspection */
+        $io = $event->getIO();
+
+        if (!file_exists('config')) {
+            mkdir('config');
+        }
+
+        foreach (scandir('vendor/pletfix/core/config') as $file) {
+            if ($file[0] == '.' || @is_dir($file)) {
+                continue;
+            }
+            if (!file_exists('config/' . $file)) {
+                copy('vendor/pletfix/core/config/' . $file, 'config/' . $file);
+            }
+        }
+
+        foreach (scandir('vendor/pletfix/core/config/boot') as $file) {
+            if ($file[0] == '.' || @is_dir($file)) {
+                continue;
+            }
+            if (!file_exists('config/boot/' . $file)) {
+                copy('vendor/pletfix/core/config/boot' . $file, 'config/boot/' . $file);
+            }
+        }
+
+        /** @noinspection PhpUndefinedMethodInspection */
+        $io->write('Configuration files created.');
     }
 
     /** @noinspection PhpUndefinedClassInspection */
