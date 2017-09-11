@@ -14,7 +14,7 @@ if (!function_exists('dummy_function')) {
 
 if (!function_exists('sort_column')) {
     /**
-     * Genereate a link to sort a table by a column
+     * Generate a link to sort a table by a column
      *
      * @param string $fieldName Name of the database field to sort after
      * @param string $displayText Text to display as link text
@@ -26,8 +26,8 @@ if (!function_exists('sort_column')) {
         $sortby = request()->input('sortby');
         $orderby = request()->input('order') == 'ASC' ? 'DESC' : 'ASC';
         $url = request()->url() . '?' . http_build_query(array_merge(request()->input(), ['sortby' => $fieldName, 'order' => $orderby]));
-        $title = 'Sortieren nach ' . $displayText . ($orderby == 'DESC' ? ' absteigend' : ' aufsteigend');
-        $icon = $sortby == $fieldName ? ' <span class="glyphicon glyphicon-chevron-' . ($orderby == 'desc' ? 'down' : 'up') . '" aria-hidden="true"></span>' : '';
+        $title = $orderby == 'DESC' ? ' sort descending' : ' sort descending';
+        $icon = $sortby == $fieldName ? ' <span class="glyphicon glyphicon-chevron-' . ($orderby == 'DESC' ? 'down' : 'up') . '" aria-hidden="true"></span>' : '';
 
         return '<a href="' . $url . '" title="' . $title . '" class="' . implode(' ', $classes) . '">' . $displayText . $icon . '</a>';
     }
