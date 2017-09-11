@@ -37,7 +37,10 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 
 Install Pletfix by entering the Composer's create-project command in your terminal:
 
+<!--
     composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json my-project-name
+-->
+    composer create-project pletfix/app my-project-name
 
 The command above creates a directory you specify (here "my-project-name") and downloads the package in this folder.
 
