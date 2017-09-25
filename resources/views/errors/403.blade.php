@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="{{asset('css/error.css')}}"/>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="title">Access Denied</div>
-        </div>
-    </div>
+<div class="error-section">
+    <h1>Access Denied</h1>
+    <p>Sorry, but you're not getting anywhere here!</p>
+</div>
 </body>
 </html>

@@ -127,7 +127,7 @@ class ComposerHandler
 
         /** @noinspection PhpUndefinedMethodInspection */
         $group = $io->ask('File group? [www-data]:> ', 'www-data');
-        foreach (['cache', 'db', 'logs', 'temp', 'upload'] as $folder) {
+        foreach (['cache', 'db', 'logs', 'sessions', 'temp', 'upload'] as $folder) {
             $path = 'storage/' . $folder;
             if (!file_exists($path)) {
                 mkdir($path);

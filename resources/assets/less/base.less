@@ -24,13 +24,73 @@ body {
   padding-bottom: 30px; /* height of the footer */
 }
 
-.content {
-  margin-top: 20px;
+/*
+ * Menu
+ */
+
+header.navbar-default {
+  .navbar-header {
+    .collapsed.hidden-lg.hidden-md.hidden-sm {
+      //noinspection CssInvalidPropertyValue
+      vertical-align: -webkit-baseline-middle;
+    }
+    img.logo {
+      height: 50px;
+      padding-top: 0;
+    }
+  }
+  .dropdown-menu i.fa {
+    width: 14px;
+    height: 14px;
+  }
 }
 
-.form-horizontal .checkbox {
-  padding-top: 0;
+/*
+ * Main Section
+ */
+
+div.content {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 10px 0;
 }
+
+// Small devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  div.content {
+    margin-top: 20px;
+  }
+}
+
+/*
+ * Footer
+ */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #f5f5f5;
+  z-index: 110;
+  padding: 5px;
+  a {
+    text-decoration: none;
+  }
+  .footer-logo {
+    height: 20px;
+  }
+  .pull-left {
+    margin-left: 10px;
+  }
+  .pull-right {
+    margin-right: 10px;
+  }
+}
+
+/*
+ * General Content Styles
+ */
 
 blockquote {
   font-style: italic;
@@ -58,58 +118,7 @@ img[style*="float:right"] {
 }
 
 /*
- * Logo styles
- */
- 
-img.logo {
-  height: 50px;
-  padding-top: 0;
-}
-
-/*
- * Navbar styles
- */
- 
-.navbar-header { /* Smartphone device */
-  .collapsed.hidden-lg.hidden-md.hidden-sm {
-    //noinspection CssInvalidPropertyValue
-    vertical-align: -webkit-baseline-middle;
-  }
-}
-
-.dropdown-menu i.fa {
-  width: 14px;
-  height: 14px;
-}
-
-/*
- * Footer styles
- */
- 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 30px; 
-  background-color: #f5f5f5;
-  z-index: 110;
-  padding: 5px;
-  a {
-    text-decoration: none;
-  }
-  .footer-logo {
-    height: 20px;
-  }
-  .pull-left {
-    margin-left: 10px;
-  }
-  .pull-right {
-    margin-right: 10px;
-  }
-}
-
-/*
- * Submit spinner styles
+ * Submit Spinner
  */
 
 .glyphicon-refresh-animate {
@@ -130,7 +139,7 @@ img.logo {
 }
 
 /*
- * Table styles
+ * Table
  */
 
 td.no-hit {
@@ -224,7 +233,7 @@ div.search {
     min-width: 100px;
   }
 }
- 
+
 /*
  * Specific device styles
  */

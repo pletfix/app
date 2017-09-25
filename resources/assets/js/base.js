@@ -95,7 +95,13 @@ jQuery(document).ready(function($) {
      * Adds a confirm message to buttons/links with the class "delete-button"
      */
     $('.delete-button').click(function() {
-        return confirm('Wollen Sie diesen Datensatz endgültig löschen?');
+        var question;
+        switch ($('html').attr('lang')) {
+            case 'de': question = 'Wollen Sie diesen Datensatz endgültig löschen?'; break;
+            default:   question = 'Are you sure you want to delete this record?';
+        }
+
+        return confirm(question);
     });
 
     /**
@@ -106,6 +112,19 @@ jQuery(document).ready(function($) {
     $('form input:checkbox[value="1"]').each(function () {
         var el = $(this);
         $('<input type="hidden" value="0">').attr('name', el.attr('name')).insertBefore(el);
+    });
+
+    /**
+     * Prevent the backspace key from navigating back.
+     */
+    $(document).unbind('keydown').bind('keydown', function (event) {
+        if (event.keyCode === 8) {
+            var el = $(event.srcElement || event.target);
+            if (el.prop('readonly') || el.prop('disabled') || (!el.is('input') && !el.is('textarea') && !el[0].isContentEditable)) {
+                event.preventDefault();
+                return false;
+            }
+        }
     });
 
     /**

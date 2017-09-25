@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="{{asset('css/error.css')}}"/>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="title">Page Not Found</div>
-        </div>
-    </div>
+<div class="error-section">
+    <h1>404</h1>
+    <p>The page you're looking for doesn't exist.</p>
+</div>
 </body>
 </html>

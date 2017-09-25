@@ -5,12 +5,6 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:pletfix/core.git"
-        }
-    ],
     "require": {
         "php": ">=5.6.4",
         "pletfix/core": "dev-master"

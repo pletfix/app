@@ -10,12 +10,13 @@
 @endsection
 
 @section('content')
-    <div class="center">
-        <div class="cover-image">
-            <img src="{{url('images/pletfix_logo_gray.png')}}"/>
+    <div class="container">
+        <div class="center">
+            <div class="cover-image">
+                <img src="{{url('images/pletfix_logo_gray.png')}}"/>
+            </div>
         </div>
+        @include('_message')
+        @include('_errors')
     </div>
-
-    @include('_message')
-    @include('_errors')
 @endsection
