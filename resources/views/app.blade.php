@@ -77,14 +77,17 @@
             <div id="navbar" class="navbar-collapse collapse">
 
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li {{isset($section) && $section == 'home' ? 'class="active"' : ''}}>
-                        <a href="{{url()}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{t('app.nav.home')}}</a>
-                    </li>
-                </ul>
+                {{--<ul class="nav navbar-nav">--}}
+                    {{--<li {!! is_active('') ? 'class="active"' : '' !!}>--}}
+                        {{--<a href="{{url()}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{t('app.nav.home')}}</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li {!! is_active('') ? 'class="active"' : '' !!}>
+                        <a href="{{url()}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{t('app.nav.home')}}</a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> {{t('app.nav.language')}}<b class="caret"></b></a>
                         <ul class="dropdown-menu">
