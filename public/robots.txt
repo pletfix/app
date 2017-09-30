@@ -1,7 +1,2 @@
 User-agent: *
-Disallow: /auth/
-Disallow: /admin/
-Disallow: /privacy
-Disallow: /terms
-Disallow: /test
-Sitemap: http://localhost/happy/public/sitemap.xml
+Disallow:
