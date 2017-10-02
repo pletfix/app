@@ -1,11 +1,6 @@
 <?php
 
 /*
- * Save the start time for benchmark tests.
- */
-define('APP_STARTTIME', microtime(true));
-
-/*
  * Set the base path of the application.
  */
 define('BASE_PATH', realpath(__DIR__ . '/..'));

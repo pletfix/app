@@ -3,7 +3,7 @@
         "pletfix/app": {
             "dev-master": {
                 "name": "pletfix/app",
-                "version": "0.7.2",
+                "version": "0.7.3",
                 "source": {
                     "type": "git",
                     "url": "git@github.com:pletfix/app.git",
