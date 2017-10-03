@@ -103,30 +103,40 @@ class ComposerHandler
             mkdir('storage');
         }
 
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io->write('Enter the file mode and group for the directories created in the storage folder.');
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io->write('Note, that the directories within the storage folder must be writable by your web server!');
-        /** @noinspection PhpUndefinedMethodInspection */
-        $io->write('Enter "-" to skip this part. In this case you have to set the permissions after the installation procedure manually.');
+        if (strtolower(substr(PHP_OS, 0, 3)) == 'win') {
+            $mode  = '-'; // mode and group do not exist on Windows
+            $group = '-';
+        }
+        else {
+            /** @noinspection PhpUndefinedMethodInspection */
+            $io->write('Enter the file mode and group for the directories created in the storage folder.');
+            /** @noinspection PhpUndefinedMethodInspection */
+            $io->write('Note, that the directories within the storage folder must be writable by your web server!');
+            /** @noinspection PhpUndefinedMethodInspection */
+            $io->write('Enter "-" to skip this part. In this case you have to set the permissions after the installation procedure manually.');
 
-        /** @noinspection PhpUndefinedMethodInspection */
-        $mode = $io->askAndValidate('File mode? [2775]:> ', function ($mode) {
-            if ($mode == '-') {
+            /** @noinspection PhpUndefinedMethodInspection */
+            $mode = $io->askAndValidate('File mode? [2775]:> ', function ($mode) {
+                if ($mode == '-') {
+                    return $mode;
+                }
+                if (!preg_match('/^([0-7])?[0-7][0-7][0-7]$/', $mode, $matches)) {
+                    throw new Exception(sprintf('Mode "%s" is invalid. The mode consists of three or four octal digits (0..7).', $mode));
+                }
                 return $mode;
-            }
-            if (!preg_match('/^([0-7])?[0-7][0-7][0-7]$/', $mode, $matches)) {
-                throw new Exception(sprintf('Mode "%s" is invalid. The mode consists of three or four octal digits (0..7).', $mode));
-            }
-            return $mode;
-        }, null, '2775');
+            }, null, '2775');
 
-        if ($mode != '-') {
-            $mode = intval($mode, 8);
+            if ($mode != '-') {
+                $mode = intval($mode, 8);
+            }
+
+            // effective group of the current process
+            $group = posix_getgrgid(posix_getegid())['name'];
+
+            /** @noinspection PhpUndefinedMethodInspection */
+            $group = $io->ask('File group? [www-data]:> ', $group);
         }
 
-        /** @noinspection PhpUndefinedMethodInspection */
-        $group = $io->ask('File group? [www-data]:> ', 'www-data');
         foreach (['cache', 'db', 'logs', 'sessions', 'temp', 'upload'] as $folder) {
             $path = 'storage/' . $folder;
             if (!file_exists($path)) {
