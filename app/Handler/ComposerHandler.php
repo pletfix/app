@@ -134,7 +134,7 @@ class ComposerHandler
             $group = posix_getgrgid(posix_getegid())['name'];
 
             /** @noinspection PhpUndefinedMethodInspection */
-            $group = $io->ask('File group? [www-data]:> ', $group);
+            $group = $io->ask('File group? [' . $group . ']:> ', $group);
         }
 
         foreach (['cache', 'db', 'logs', 'sessions', 'temp', 'upload'] as $folder) {
