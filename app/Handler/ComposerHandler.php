@@ -130,8 +130,7 @@ class ComposerHandler
                 $mode = intval($mode, 8);
             }
 
-            // effective group of the current process
-            $group = posix_getgrgid(posix_getegid())['name'];
+            $group = 'www-data';
 
             /** @noinspection PhpUndefinedMethodInspection */
             $group = $io->ask('File group? [' . $group . ']:> ', $group);

@@ -38,23 +38,23 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 Install Pletfix by entering the Composer's create-project command in your terminal:
 
 <pre>    
-composer create-project pletfix/app my-app-name
+composer create-project pletfix/app myapp
 </pre>
 
 The current development version (may be unstable):
 <pre>
-composer create-project pletfix/app --stability=dev my-app-name
+composer create-project pletfix/app --stability=dev myapp
 </pre>
 
 <!--
-    composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json my-app-name
+    composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json myapp
 -->
 
 > Pletfix uses the [Asset Packagist](https://asset-packagist.org/) by [HiQDev](https://hiqdev.com/) to download Bower and NPM packages via Composer. 
 > It's licensed under [BSD 3-clause](https://github.com/hiqdev/asset-packagist/blob/master/LICENSE). 
 > Thanks for this great work!
 
-The command above creates a directory you specify (here "my-app-name") and downloads the package in this folder.
+The command above creates a directory you specify (here "myapp") and downloads the package in this folder.
 
 ![Screenshot - Installation started](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_started.png)     
 
