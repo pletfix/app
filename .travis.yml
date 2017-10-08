@@ -2,6 +2,7 @@ language: php
 
 php:
   - '5.6'
+  - '7.1'
 
 before_install:
   # update composer
@@ -13,7 +14,7 @@ before_install:
 install:
   # create environment file
   - echo 'APP_ENV=testing' > .env
-  - echo 'APP_URL=http://localhost/public' >> .env
+  - echo 'APP_URL=http://localhost:8000' >> .env
 
   # create storage folder
   - mkdir storage && mkdir storage/cache && mkdir storage/db && mkdir storage/logs && mkdir storage/sessions && mkdir storage/temp && mkdir storage/upload
