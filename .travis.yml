@@ -12,10 +12,16 @@ before_install:
   - composer self-update
 
 install:
-  # install the application
+  # create the storage folder
+  - mkdir storage && mkdir storage/cache && mkdir storage/db && mkdir storage/logs && mkdir storage/sessions && mkdir storage/temp && mkdir storage/upload
   - chmod 2777 storage/*
+  - touch storage/db/sqlite.db
+
+  # create the environment file
   - echo 'APP_ENV=testing' > .env
   - echo 'APP_URL=http://localhost/public' >> .env
+
+  # install dependencies
   - composer install
 
 script:
