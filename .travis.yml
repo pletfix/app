@@ -25,8 +25,8 @@ install:
   - composer install
 
   # copy config
-  - cp -n vendor/pletfix/core/config/* config/*
-  - cp -n vendor/pletfix/core/boot/* boot/*
+  - cp -n vendor/pletfix/core/config/* config
+  - cp -n vendor/pletfix/core/boot/* boot
 
   # migrate database
   - php console migrate
