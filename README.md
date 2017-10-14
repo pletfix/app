@@ -37,14 +37,14 @@ Read more about Pletfix in the [official documentation](https://pletfix.com).
 
 Install Pletfix by entering the Composer's create-project command in your terminal:
 
-<pre>    
+```bash
 composer create-project pletfix/app myapp
-</pre>
+```
 
 The current development version (may be unstable):
-<pre>
+```bash
 composer create-project pletfix/app --stability=dev myapp
-</pre>
+```
 
 <!--
     composer create-project pletfix/app --repository=https://raw.githubusercontent.com/pletfix/app/master/packages.json myapp
@@ -67,11 +67,13 @@ Note, that the directories within the storage folder must be writable by your we
 
 Enter "-" to skip this part. In this case you have to set the permissions after the installation procedure manually like 
 this:
-    
-    cd storage
-    chgrp www-data *
-    chmod 775 *
-    chmod g+s *
+
+```bash    
+cd storage
+chgrp www-data *
+chmod 775 *
+chmod g+s *
+```
 
 **Database**
 
@@ -87,14 +89,27 @@ with **Y** (the default).
 
 ![Screenshot - Installation completed](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_completed.png)     
 
-That's all! Now the application is ready for the first request. 
+Now the application is ready for the first request. 
 
-Open your browser and enter the URL of the application's public folder, e.g.
-    
-    http://localhost/my-app/public/
-    
+## Start the Application
+
+Before you open the application with your browser, you should configure the document root of the web server to be the 
+`public` directory.
+
+If you have not installed a web server on your development environment, or if you do not have time or desire to  
+configure your server, you can start up the PHP's built-in web server with the following command: 
+
+```bash
+php -S localhost:8000 -t public/ router.php
+```
+
+> Note, that the built-in web server should never be used in a production environment. It is only intended as a basic 
+> development server!
+
+That's all! This command will serve your application at `http://localhost:8000`.
+
 ![Screenshot - Application](https://raw.githubusercontent.com/pletfix/app/master/resources/docs/screenshot_app.png)
-    
+
 ## Customizing
 
 ### Environment
@@ -107,7 +122,12 @@ Therefore, be sure, that this file is registered in `.gitignore`.
 ### Additional Configuration
 
 Customize the configuration files stored in `config` folder.
+        
+## Web Server Configuration
     
+For the production environment a web server with URL rewriting is required, e.g. Apache or Nginx.
+Read the [Pletfix documentation](https://pletfix.com/docs/master/en/installation#web-server) for setup instructions.
+
 ## License
 
 The Pletfix framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
