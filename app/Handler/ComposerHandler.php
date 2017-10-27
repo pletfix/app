@@ -192,7 +192,7 @@ class ComposerHandler
         }
 
         foreach (scandir('vendor/pletfix/core/config') as $file) {
-            if ($file[0] == '.' || @is_dir('vendor/pletfix/core/config/' . $file)) {
+            if ($file[0] == '.' || is_dir('vendor/pletfix/core/config/' . $file)) {
                 continue;
             }
             if (!file_exists('config/' . $file)) {
@@ -205,7 +205,7 @@ class ComposerHandler
         }
 
         foreach (scandir('vendor/pletfix/core/boot') as $file) {
-            if ($file[0] == '.' || @is_dir('vendor/pletfix/core/boot/' . $file)) {
+            if ($file[0] == '.' || is_dir('vendor/pletfix/core/boot/' . $file)) {
                 continue;
             }
             if (!file_exists('boot/' . $file)) {
