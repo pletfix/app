@@ -12,20 +12,20 @@ class ExampleTest extends MinkTestCase
         $this->assertEquals(1, 1);
     }
 
-    /**
-     * A mink test example.
-     */
-    public function testMinkExample()
-    {
-        $url = config('app.url');
-        $this->session->visit($url);
-        $page = $this->session->getPage();
-
-        $title = $page->find('xpath', '//title');
-        if ($title !== null) {
-            $title = $title->getText();
-        }
-
-        $this->assertEquals('Pletfix Application', $title);
-    }
+//    /**
+//     * A mink test example.
+//     */
+//    public function testMinkExample()
+//    {
+//        $url = config('app.url');
+//        $this->session->visit($url);
+//        $page = $this->session->getPage();
+//
+//        $title = $page->find('xpath', '//title');
+//        if ($title !== null) {
+//            $title = $title->getText();
+//        }
+//
+//        $this->assertEquals('Pletfix Application', $title);
+//    }
 }
