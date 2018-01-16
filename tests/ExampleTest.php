@@ -12,6 +12,11 @@ class ExampleTest extends MinkTestCase
         $this->assertEquals(1, 1);
     }
 
+
+// todo:  travis-ci schlägt plötzlich fehl, liegt aber nicht am Source!
+// funktionierte am 27. Okt.: PHPUnit 5.7.23, PHP 7.1.11 with Xdebug 2.5.5
+// aber nicht mehr am 12 Dez: PHPUnit 5.7.25, PHP 7.1.12 with Xdebug 2.5.5
+//
 //    /**
 //     * A mink test example.
 //     */

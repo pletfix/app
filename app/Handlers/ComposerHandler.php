@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Handler;
+namespace App\Handlers;
 
 use /** @noinspection PhpUndefinedClassInspection, PhpUndefinedNamespaceInspection */ Composer\Script\Event;
 use Exception;
