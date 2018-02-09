@@ -6,7 +6,7 @@ function modalConfirm(title, body, callback)
     var dlg = $('#modal');
     dlg.find('.modal-title').html(title);
     dlg.find('.modal-body').html(body);
-    dlg.find('.cancle-button').show();
+    dlg.find('.cancel-button').show();
     dlg.modalDialog(function(btn) {
         if (callback) { callback(btn.data('result') == 'ok'); }
     });
@@ -20,7 +20,7 @@ function modalAlert(title, body, callback)
     var dlg = $('#modal');
     dlg.find('.modal-title').html(title);
     dlg.find('.modal-body').html(body);
-    dlg.find('.cancle-button').hide();
+    dlg.find('.cancel-button').hide();
     dlg.modalDialog(function(btn) {
         if (callback) { callback(btn.data('result') == 'ok'); }
     });
@@ -51,7 +51,8 @@ function modalAlert(title, body, callback)
     /**
      * Centers modals vertically on the screen
      */
-    function centerModal() {
+    function centerModal()
+    {
         var modal = $(this);
         modal.css('display', 'block');
         var dialog = modal.find('.modal-dialog');

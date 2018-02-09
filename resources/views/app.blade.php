@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{config('app.locale')}}">
+<html lang="{{locale()}}">
 <head>
     <title>@yield('title', config('app.name'))</title>
 
@@ -113,5 +113,24 @@
             {{t('app.version')}} {{config('app.version')}}
         </span>
     </footer>
+
+    <!-- Modal -->
+
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary confirm-button" data-dismiss="modal" data-result="ok" >{{t('common.buttons.ok')}}</button>
+                    <button type="button" class="btn btn-default cancel-button" data-dismiss="modal" data-result="cancel">{{t('common.buttons.cancel')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
